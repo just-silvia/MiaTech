@@ -24,3 +24,18 @@ h6{
 .text{
     font-size: 30px;
 }
+.bgcolor {
+    border: 2px;
+    border-radius: 5px;
+    background-color: brown;
+}
+.colors{
+    border: 2px;
+    border-radius: 5px;
+    background-color: orangered;
+    color: orange;
+}
+.flowerimg{
+    border: 2px;
+    border-radius: 5px;
+}
