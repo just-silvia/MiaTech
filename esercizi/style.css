@@ -1,3 +1,8 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10%;
+    text-align: center;
+}
 p{
     color: pink;
     text-align: right;
