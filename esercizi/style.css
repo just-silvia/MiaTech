@@ -47,6 +47,6 @@ h6{
 h6, h2, p{
     border: double;
 }
-.anchor-tag:hover{
+a:hover{
     color: black;
 }
