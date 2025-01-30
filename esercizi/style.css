@@ -50,3 +50,8 @@ h6, h2, p{
 a:hover{
     color: black;
 }
+ul li:last-child{
+    color: blue;
+    background-color: rgb(133, 104, 70);
+    font-family: 'Times New Roman', Times, serif;
+}
