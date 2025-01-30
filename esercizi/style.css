@@ -44,3 +44,6 @@ h6{
     border: 2px;
     border-radius: 5px;
 }
+h6, h2, p{
+    border: double;
+}
