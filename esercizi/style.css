@@ -73,3 +73,6 @@ ul li:last-child::first-line{
 .rgb{
     color: rgb(255, 0, 0);
 }
+.hex{
+    color: #ff0000;
+}
