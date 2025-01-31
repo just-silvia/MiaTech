@@ -79,3 +79,6 @@ ul li:last-child::first-line{
 .rgba{
     color: rgba(255, 0, 0, 0.5);
 }
+.colorname{
+    color: red;
+}
