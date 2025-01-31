@@ -5,7 +5,12 @@
 }
 p{
     color: pink;
-    text-align: right;
+}
+.classe{
+    color: purple;
+}
+#id{
+    color: aqua;
 }
 h1{
     color: aqua;
