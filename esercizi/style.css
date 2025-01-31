@@ -55,3 +55,18 @@ ul li:last-child::first-line{
     background-color: rgb(133, 104, 70);
     font-family: 'Times New Roman', Times, serif;
 }
+.left, .middle, .right{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    color: blueviolet;
+    border: dotted;
+}
+.left{
+    text-align: left;
+}
+.middle{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
