@@ -16,3 +16,12 @@
     height: 100px;
     background-color: blue;
 }
+.size{
+    font-size: 5px;
+}
+.rem{
+    font-size: 7rem;
+}
+.em{
+    font-size: 7em;
+}
