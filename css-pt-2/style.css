@@ -39,4 +39,5 @@
 .test-padding{
     background-color: pink;
     padding: var(--padding-size);
+    margin: 5px;
 }
