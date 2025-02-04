@@ -36,3 +36,7 @@
     font-size: 7em;
     color: var(--colore-principale);
 }
+.test-padding{
+    background-color: pink;
+    padding: var(--padding-size);
+}
