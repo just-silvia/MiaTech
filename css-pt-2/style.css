@@ -44,3 +44,8 @@
     margin: var(--margin);
     border: var(--border-style);
 }
+ul{
+    li{
+        display: inline-block;
+    }
+}
