@@ -1,6 +1,9 @@
 *{
     --colore-principale: red;
 }
+:root{
+    --padding-size: 10px;
+}
 .container{
     display: block;
     position: relative;
