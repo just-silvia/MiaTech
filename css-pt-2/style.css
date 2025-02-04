@@ -5,6 +5,9 @@
     --padding-size: 10px;
     --margin: 5px;
     --border-style: 5px solid rgb(41, 5, 77);
+    --ant-width: 70px;
+    --any-height: 50px;
+    --any-background-color: beige;
 }
 .container{
     display: block;
@@ -48,4 +51,19 @@ ul{
     li{
         display: inline-block;
     }
+}
+span{
+    width: var(--ant-width);
+    height: var(--any-height);
+    background-color: var(--any-background-color);
+    border-style: var(--border-style);
+}
+.inline{
+    display: inline;
+}
+.inline-block{
+    display: inline-block;
+}
+.block{
+    display: block;
 }
