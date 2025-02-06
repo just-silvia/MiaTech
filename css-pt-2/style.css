@@ -70,3 +70,6 @@ span{
 .right{
     float: right;
 }
+.clear{
+    clear: both;
+}
