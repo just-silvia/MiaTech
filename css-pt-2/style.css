@@ -64,6 +64,9 @@ span{
 .block{
     display: block;
 }
-p{
+"p{
     display: none;
+}"
+.right{
+    float: right;
 }
