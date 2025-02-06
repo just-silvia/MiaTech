@@ -10,9 +10,6 @@
     --any-background-color: beige;
 }
 .container{
-    display: block;
-    position: relative;
-    margin: auto;
     border: 10%;
     padding-left: 5%;
     padding-right: 5%;
@@ -66,4 +63,7 @@ span{
 }
 .block{
     display: block;
+}
+p{
+    display: none;
 }
