@@ -8,5 +8,5 @@
     border: 5px solid pink;
 }
 .navbar{
-    position: sticky;
+    position: fixed;
 }
