@@ -16,8 +16,8 @@ div{
     
 }
 .item-2{
-    flex-shrink: 0;
+    flex-basis: 200px;
 }
 .item-3{
-    flex-shrink: 0;
+    
 }
