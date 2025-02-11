@@ -10,3 +10,12 @@ div{
     padding: 20px;
     border: 5px solid black;
 }
+.item-1{
+    flex-grow: 1;
+}
+.item-2{
+    flex-grow: 1;
+}
+.item-3{
+    flex-grow: 8;
+}
