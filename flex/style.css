@@ -1,4 +1,11 @@
 .flex-container{
     display: flex;
     flex-direction: wrap;
+    align-items: center;
+    background-color: aqua;
+}
+div{
+    background-color: antiquewhite;
+    padding: 20px;
+    border: 5px solid black;
 }
