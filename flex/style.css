@@ -1,8 +1,6 @@
 .flex-container{
     display: flex;
     flex-direction: wrap;
-    align-items: center;
-    justify-content: center;
     background-color: aqua;
     height: 200px;
 }
@@ -13,10 +11,10 @@ div{
     height: 50px;
 }
 .item-1{
-    
+    align-self: flex-end;
 }
 .item-2{
-    flex-basis: 200px;
+    align-self: center;
 }
 .item-3{
     
