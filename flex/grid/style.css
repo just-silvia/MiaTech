@@ -1,4 +1,15 @@
 .grid-container{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    background-color: pink;
+    padding: 10px;
+}
+.grid-container div{
+    background-color: white;
+    border: 1px solid purple;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
 }
