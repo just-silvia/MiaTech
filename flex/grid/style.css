@@ -1,10 +1,10 @@
 .grid-container{
-    display: grid;
-    grid-template-rows: 200px 300px; 
-    grid-template-columns: repeat(5, 1fr);
+    display: grid; 
+    grid-template-columns: 100px;
     gap: 5px;
     background-color: pink;
     padding: 10px;
+    justify-content: center;
 }
 .grid-container div{
     background-color: white;
