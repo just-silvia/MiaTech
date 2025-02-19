@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+nav ul li {
+  margin: 10px;
+  font-size: 18px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+/*# sourceMappingURL=output.css.map */
