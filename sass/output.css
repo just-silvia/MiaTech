@@ -2,6 +2,7 @@ nav {
   display: flex;
   text-align: center;
   justify-content: center;
+  background-color: rgb(108, 156, 245);
 }
 nav ul {
   display: flex;
