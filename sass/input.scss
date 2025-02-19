@@ -3,6 +3,10 @@ $main-font-size: 18px;
 $main-text-margin: 10px;
 $hover-color: #ff0000;
 
+%light-color{
+    background-color: #e7e7e7;
+}
+
 nav{
     display: flex;
     text-align: center;
@@ -15,6 +19,9 @@ nav{
         li{
             margin: $main-text-margin;
             font-size: $main-font-size;
+            &:last-child{
+                @extend%light-color;
+            }
             a{
                 text-decoration: none;
                 &:hover{
