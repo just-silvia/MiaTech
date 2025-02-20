@@ -1,17 +1,50 @@
-/* Error: There is no module with the namespace "_colors".
- *    ,
- * 14 |     background-color: _colors.$primary-ground-color;
- *    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   input.scss 14:23  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: There is no module with the namespace "_colors".\a    \2577 \a 14 \2502      background-color: _colors.$primary-ground-color;\d\a    \2502                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   input.scss 14:23  root stylesheet';
+.navbar.dark {
+  background-color: #000000;
+  color: white;
 }
+.navbar.dark a {
+  color: white;
+}
+.navbar.dark a:hover {
+  color: yellow;
+}
+
+nav ul li:last-child {
+  background-color: #e7e7e7;
+}
+
+nav {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(108, 156, 245);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+nav ul li {
+  margin: 10px;
+  font-size: 18px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+.container .box_1 {
+  width: 33.3333333333%;
+  background-color: rgb(5, 69, 187);
+}
+.container .box_2 {
+  background-color: rgb(108, 156, 245);
+}
+
+/*# sourceMappingURL=output.css.map */
