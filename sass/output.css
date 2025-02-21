@@ -10,7 +10,7 @@
 }
 
 nav ul li:last-child {
-  background-color: #e7e7e7;
+  background-color: yellow;
 }
 
 nav {
@@ -33,6 +33,10 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #ff0000;
+}
+
+body {
+  background-color: violet;
 }
 
 .container {

@@ -1,3 +1,5 @@
+@use'colors';
+
 @mixin theme($background, $textColor, $hoverColor) {
     background-color: $background;
     color: $textColor;
@@ -27,9 +29,10 @@ $secondary-ground-color: rgb(5, 69, 187);
 $hover-color: #ff0000;
 $main-font-size: 18px;
 $main-text-margin: 10px;
+$noHover: false;
 
 %light-color{
-    background-color: #e7e7e7;
+    background-color: colors.$colorText;
 }
 
 nav{
@@ -54,6 +57,16 @@ nav{
                 }
             }
         }
+    }
+}
+
+@if $noHover {
+    body{
+        background-color: pink;
+    }
+}@else {
+    body{
+        background-color: violet;
     }
 }
 
