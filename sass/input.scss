@@ -8,6 +8,14 @@ $base-color: #036;
   }
 }
 
+$colors: rgb(112, 112, 248), rgb(255, 118, 118), rgb(167, 253, 167), rgb(255, 212, 133);
+
+@each $color in $colors{
+    .menu-item-#{$colors}{
+        background-color: $colors;
+    }
+}
+
 @mixin theme($background, $textColor, $hoverColor) {
     background-color: $background;
     color: $textColor;
