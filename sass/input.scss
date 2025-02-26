@@ -2,18 +2,16 @@
 
 $base-color: #036;
 
-@for $i from 1 through 3 {
-  ul:nth-child(3n + #{$i}) {
-    background-color: lighten($base-color, $i * 5%);
+$colors: (red, blue, green);
+
+@each $color in $colors {
+  .bg-#{$color} {
+    background-color: $color;
   }
-}
 
-$colors: rgb(112, 112, 248), rgb(255, 118, 118), rgb(167, 253, 167), rgb(255, 212, 133);
-
-@each $color in $colors{
-    .menu-item-#{$colors}{
-        background-color: $colors;
-    }
+  .text-#{$color} {
+    color: $color;
+  }
 }
 
 @mixin theme($background, $textColor, $hoverColor) {
