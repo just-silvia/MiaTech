@@ -1,0 +1,97 @@
+@use'colors';
+
+$base-color: #036;
+
+$colors: (red, blue, green);
+
+@each $color in $colors {
+  .bg-#{$color} {
+    background-color: $color;
+  }
+
+  .text-#{$color} {
+    color: $color;
+  }
+}
+
+@mixin theme($background, $textColor, $hoverColor) {
+    background-color: $background;
+    color: $textColor;
+    
+    a {
+      color: $textColor;
+      &:hover {
+        color: $hoverColor;
+      }
+    }
+  }
+  
+.navbar {
+    &.dark {
+      @include theme(#000000, white, yellow);
+    }
+}
+
+$base-font-size: 16px;
+
+@function em($target, $base-font-size){
+    @return ($target / $base-font-size) * 1em;
+}
+
+$primary-ground-color: rgb(108, 156, 245);
+$secondary-ground-color: rgb(5, 69, 187);
+$hover-color: #ff0000;
+$main-font-size: 18px;
+$main-text-margin: 10px;
+$noHover: false;
+
+%light-color{
+    background-color: colors.$colorText;
+}
+
+nav{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: $primary-ground-color;
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        li{
+            margin: $main-text-margin;
+            font-size: $main-font-size;
+            &:last-child{
+                @extend%light-color;
+            }
+            a{
+                text-decoration: none;
+                &:hover{
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+}
+
+@if $noHover {
+    body{
+        background-color: pink;
+    }
+}@else {
+    body{
+        background-color: violet;
+    }
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    .box_1{
+        width: calc(100% / 3);
+        background-color: $secondary-ground-color;
+    }
+    .box_2{
+        background-color: $primary-ground-color;
+    }
+}

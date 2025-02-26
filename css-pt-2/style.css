@@ -1,0 +1,75 @@
+*{
+    --colore-principale: red;
+}
+:root{
+    --padding-size: 10px;
+    --margin: 5px;
+    --border-style: 5px solid rgb(41, 5, 77);
+    --ant-width: 200px;
+    --any-height: 100px;
+    --any-background-color: beige;
+}
+.container{
+    border: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 10%;
+    height: 5%;
+    background-color: aqua;
+    color: var(--colore-principale);
+}
+.px-container{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: var(--colore-principale);
+}
+.size{
+    font-size: 5px;
+    color: var(--colore-principale);
+}
+.rem{
+    font-size: 7rem;
+    color: var(--colore-principale);
+}
+.em{
+    font-size: 7em;
+    color: var(--colore-principale);
+}
+.test-padding{
+    background-color: pink;
+    padding: var(--padding-size);
+    margin: var(--margin);
+    border: var(--border-style);
+}
+ul{
+    li{
+        display: inline-block;
+    }
+}
+span{
+    width: var(--ant-width);
+    height: var(--any-height);
+    background-color: var(--any-background-color);
+    border: var(--border-style);
+}
+.inline{
+    display: inline;
+}
+.inline-block{
+    display: inline-block;
+}
+.block{
+    display: block;
+}
+"p{
+    display: none;
+}"
+.right{
+    float: right;
+}
+.clear{
+    clear: both;
+}
