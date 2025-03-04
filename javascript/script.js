@@ -28,6 +28,14 @@ let outside = 2;
 
 // console.log(outside, inside);
 
-for(let i = 0; i <20; i += 2) {
+// for(let i = 0; i <20; i += 2) {
+//     console.log(i);
+// }
+
+let i = 10;
+while(i > 0){
+    if(i % 2 !== 0){
     console.log(i);
+    }
+    i -= 1;
 };
