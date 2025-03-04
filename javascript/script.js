@@ -11,3 +11,11 @@ console.log(value);
 value = 9;
 
 console.log(value);
+
+let number = 6;
+{
+    let number = 8;
+    console.log(number);
+};
+
+console.log(number);
