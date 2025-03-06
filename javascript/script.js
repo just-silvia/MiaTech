@@ -52,3 +52,14 @@ if(number >= 5){
 }else {
     console.log("La variabile è minore di 5")
 };
+
+let score = parseInt(prompt("Inserisci un valore numerico."));
+if(score >= 90 && score <= 100){
+    console.log("Voto ottimo!");
+}else if(score >= 70 && score <= 89){
+    console.log("Voto buono.");
+}else if(score >= 60 && score <= 69){
+    console.log("Voto sufficiente.");
+}else{
+    console.log("Voto insufficiente.");
+};
