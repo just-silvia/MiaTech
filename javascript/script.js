@@ -54,12 +54,16 @@ if(number >= 5){
 };
 
 let score = parseInt(prompt("Inserisci un valore numerico."));
-if(score >= 90 && score <= 100){
-    console.log("Voto ottimo!");
-}else if(score >= 70 && score <= 89){
-    console.log("Voto buono.");
-}else if(score >= 60 && score <= 69){
-    console.log("Voto sufficiente.");
-}else{
-    console.log("Voto insufficiente.");
+switch(true){
+    case(score >= 90 && score <= 100):
+        console.log("Voto ottimo!");
+        break;
+    case(score >= 70 && score <= 89):
+        console.log("Voto buono.");
+        break;
+    case(score >= 60 && score <= 69):
+        console.log("Voto sufficiente.");
+        break;
+    default:
+        console.log("Voto insufficiente.");
 };
