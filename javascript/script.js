@@ -91,15 +91,31 @@
 //     console.log(`${property}: ${person[property]}`);
 // };
 
-function outerFunction(x, initialValue){
-    let result = initialValue;
-    function innerFunction(y){
-        result += y;
-        return result;
-    }
-    return innerFunction;
-}
+// function outerFunction(x, initialValue){
+//     let result = initialValue;
+//     function innerFunction(y){
+//         result += y;
+//         return result;
+//     }
+//     return innerFunction;
+// }
 
-const sum = outerFunction(5, 8);
-console.log(sum(4));
-console.log(sum(6));
+// const sum = outerFunction(5, 8);
+// console.log(sum(4));
+// console.log(sum(6));
+
+function createCounter(){
+    let count = 0;
+    return{
+        increment : function(){
+            return ++count;
+        },
+        decrement : function(){
+            return --count;
+        }
+    };
+}
+const counter = createCounter(); 
+console.log(counter.increment()); 
+console.log(counter.decrement()); 
+console.log(counter.decrement()); 
