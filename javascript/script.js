@@ -91,12 +91,15 @@
 //     console.log(`${property}: ${person[property]}`);
 // };
 
-function outerFunction(x){
+function outerFunction(x, initialValue){
+    let result = initialValue;
     function innerFunction(y){
-        return x + y;
+        result += y;
+        return result;
     }
     return innerFunction;
 }
 
-const sum = outerFunction(5);
+const sum = outerFunction(5, 8);
 console.log(sum(4));
+console.log(sum(6));
