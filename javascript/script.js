@@ -126,4 +126,4 @@ let student = {
     grade : "6th",
     school : "Claudio Varalli"
 };
-console.log(Object.keys(student));
+console.log(Object.values(student));
