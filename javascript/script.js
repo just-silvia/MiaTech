@@ -86,4 +86,7 @@ let person = {
 };
 person.age = 23;
 person.job = "unemployed";
-console.log(person.job)
+// console.log(person.job)
+for (const property in person) {
+    console.log(`${property}: ${person[property]}`);
+};
