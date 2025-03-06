@@ -85,4 +85,5 @@ let person = {
     city : "Milano"
 };
 person.age = 23;
-console.log(person.age)
+person.job = "unemployed";
+console.log(person.job)
