@@ -1,16 +1,16 @@
-let name = "John Doe";
-const job = "developer";
+// let name = "John Doe";
+// const job = "developer";
 
-console.log(name);
-console.log(job);
+// console.log(name);
+// console.log(job);
 
-let value = 5;
+// let value = 5;
 
-console.log(value);
+// console.log(value);
 
-value = 9;
+// value = 9;
 
-console.log(value);
+// console.log(value);
 
 // let number = 6;
 // {
@@ -68,7 +68,14 @@ console.log(value);
 //         console.log("Voto insufficiente.");
 // };
 
-const numbers = [1,2,3,4,5,6,7];
-for(let i = numbers.length; i >= 0; i--){
-    console.log(numbers[i]);
-};
+// const numbers = [1,2,3,4,5,6,7];
+// for(let i = numbers.length; i >= 0; i--){
+//     console.log(numbers[i]);
+// };
+
+// let parole = [];
+// for(let i = 0; i < 5; i++){
+//     let parola = prompt("Inserisci una parola.");
+//     parole.push(parola);
+// };
+
