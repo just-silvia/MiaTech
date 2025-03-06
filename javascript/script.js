@@ -126,4 +126,8 @@ let student = {
     grade : "6th",
     school : "Claudio Varalli"
 };
-console.log(Object.values(student));
+console.log(Object.entries(student));
+
+for (let [key, value] of Object.entries(student)) {
+    console.log(`${key} : ${value}`);
+};
