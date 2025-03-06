@@ -104,18 +104,26 @@
 // console.log(sum(4));
 // console.log(sum(6));
 
-function createCounter(){
-    let count = 0;
-    return{
-        increment : function(){
-            return ++count;
-        },
-        decrement : function(){
-            return --count;
-        }
-    };
-}
-const counter = createCounter(); 
-console.log(counter.increment()); 
-console.log(counter.decrement()); 
-console.log(counter.decrement()); 
+// function createCounter(){
+//     let count = 0;
+//     return{
+//         increment : function(){
+//             return ++count;
+//         },
+//         decrement : function(){
+//             return --count;
+//         }
+//     };
+// }
+// const counter = createCounter(); 
+// console.log(counter.increment()); 
+// console.log(counter.decrement()); 
+// console.log(counter.decrement()); 
+
+let student = {
+    name : "Mario Rossi",
+    age : 16,
+    grade : "6th",
+    school : "Claudio Varalli"
+};
+console.log(Object.keys(student));
