@@ -79,3 +79,9 @@
 //     parole.push(parola);
 // };
 
+let person = {
+    name : "Silvia",
+    age : 22,
+    city : "Milano"
+};
+console.log(person);
