@@ -79,14 +79,24 @@
 //     parole.push(parola);
 // };
 
-let person = {
-    name : "Silvia",
-    age : 22,
-    city : "Milano"
-};
-person.age = 23;
-person.job = "unemployed";
-// console.log(person.job)
-for (const property in person) {
-    console.log(`${property}: ${person[property]}`);
-};
+// let person = {
+//     name : "Silvia",
+//     age : 22,
+//     city : "Milano"
+// };
+// person.age = 23;
+// person.job = "unemployed";
+// // console.log(person.job)
+// for (const property in person) {
+//     console.log(`${property}: ${person[property]}`);
+// };
+
+function outerFunction(x){
+    function innerFunction(y){
+        return x + y;
+    }
+    return innerFunction;
+}
+
+const sum = outerFunction(5);
+console.log(sum(4));
