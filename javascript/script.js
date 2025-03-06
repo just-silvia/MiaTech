@@ -46,24 +46,25 @@ console.log(value);
 // }while (!word || word.length < 5);
 // console.log("La lunghezza dei caratteri è approvata:", word);
 
-let number = 7;
-if(number >= 5){
-    console.log("La variabile è maggiore di 5.")
-}else {
-    console.log("La variabile è minore di 5")
-};
+// let number = 7;
+// if(number >= 5){
+//     console.log("La variabile è maggiore di 5.")
+// }else {
+//     console.log("La variabile è minore di 5")
+// };
 
-let score = parseInt(prompt("Inserisci un valore numerico."));
-switch(true){
-    case(score >= 90 && score <= 100):
-        console.log("Voto ottimo!");
-        break;
-    case(score >= 70 && score <= 89):
-        console.log("Voto buono.");
-        break;
-    case(score >= 60 && score <= 69):
-        console.log("Voto sufficiente.");
-        break;
-    default:
-        console.log("Voto insufficiente.");
-};
+// let score = parseInt(prompt("Inserisci un valore numerico."));
+// switch(true){
+//     case(score >= 90 && score <= 100):
+//         console.log("Voto ottimo!");
+//         break;
+//     case(score >= 70 && score <= 89):
+//         console.log("Voto buono.");
+//         break;
+//     case(score >= 60 && score <= 69):
+//         console.log("Voto sufficiente.");
+//         break;
+//     default:
+//         console.log("Voto insufficiente.");
+// };
+
