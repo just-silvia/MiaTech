@@ -146,14 +146,25 @@
 // const squaredNumbers = numbers.map((x) => x * x);
 // console.log(squaredNumbers);
 
-const students = [
-    {name: "Silvia", grade:59},
-    {name: "Mattia", grade:71},
-    {name: "Federica", grade:88},
-    {name: "Giorgia", grade:100},
-]
-const passedStudents = students.filter((student) => student.grade >= 60);
+// const students = [
+//     {name: "Silvia", grade:59},
+//     {name: "Mattia", grade:71},
+//     {name: "Federica", grade:88},
+//     {name: "Giorgia", grade:100},
+// ]
+// const passedStudents = students.filter((student) => student.grade >= 60);
 
-const failedStudents = students.find((student) => student.grade < 60);
-console.log("Studenti promossi:", passedStudents);
-console.log("Studenti bocciati:", failedStudents);
+// const failedStudents = students.find((student) => student.grade < 60);
+// console.log("Studenti promossi:", passedStudents);
+// console.log("Studenti bocciati:", failedStudents);
+
+const expenses = [17, 30, 220, 45];
+const initialExpenses = 0;
+const sumExpenses = expenses.reduce((accumulator, currentValue) => accumulator + currentValue, initialExpenses);
+// console.log(sumExpenses);
+
+const words = ["banana", "apples", "cherry", "date"];
+words.sort();
+// console.log(words);
+console.log("Prodotti acquistati:", words);
+console.log("Spesa totale:", sumExpenses);
