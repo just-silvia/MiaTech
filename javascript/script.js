@@ -140,8 +140,20 @@
 //     console.log(`${key} : ${value}`);
 // };
 
-const numbers = [1,2,3,4,5];
-numbers.forEach(number => console.log(number * 2));
+// const numbers = [1,2,3,4,5];
+// numbers.forEach(number => console.log(number * 2));
 
-const squaredNumbers = numbers.map((x) => x * x);
-console.log(squaredNumbers);
+// const squaredNumbers = numbers.map((x) => x * x);
+// console.log(squaredNumbers);
+
+const students = [
+    {name: "Silvia", grade:59},
+    {name: "Mattia", grade:71},
+    {name: "Federica", grade:88},
+    {name: "Giorgia", grade:100},
+]
+const passedStudents = students.filter((student) => student.grade >= 60);
+
+const failedStudents = students.find((student) => student.grade < 60);
+console.log("Studenti promossi:", passedStudents);
+console.log("Studenti bocciati:", failedStudents);
