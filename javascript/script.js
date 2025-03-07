@@ -73,18 +73,6 @@
 //     console.log(numbers[i]);
 // };
 
-// let parole = [];
-// for(let i = 0; i < 5; i++){
-//     let parola = prompt("Inserisci una parola.");
-//     parole.push(parola);
-// };
-// console.log(parole);
-// for(let i = 0; i < parole.length; i++){
-//     if(parole[i].length % 2 !== 0){
-//         console.log(parole[i]);
-//     }
-// };
-
 // let person = {
 //     name : "Silvia",
 //     age : 22,
@@ -158,13 +146,25 @@
 // console.log("Studenti promossi:", passedStudents);
 // console.log("Studenti bocciati:", failedStudents);
 
-const expenses = [17, 30, 220, 45];
-const initialExpenses = 0;
-const sumExpenses = expenses.reduce((accumulator, currentValue) => accumulator + currentValue, initialExpenses);
-// console.log(sumExpenses);
+// const expenses = [17, 30, 220, 45];
+// const initialExpenses = 0;
+// const sumExpenses = expenses.reduce((accumulator, currentValue) => accumulator + currentValue, initialExpenses);
+// // console.log(sumExpenses);
 
-const words = ["banana", "apples", "cherry", "date"];
-words.sort();
-// console.log(words);
-console.log("Prodotti acquistati:", words);
-console.log("Spesa totale:", sumExpenses);
+// const words = ["banana", "apples", "cherry", "date"];
+// words.sort();
+// // console.log(words);
+// console.log("Prodotti acquistati:", words);
+// console.log("Spesa totale:", sumExpenses);
+
+let parole = [];
+for(let i = 0; i < 5; i++){
+    let parola = prompt("Inserisci una parola:");
+    parole.push(parola);
+};
+console.log(parole);
+for(let i = 0; i < parole.length; i++){
+    if(parole[i].length % 2 !==0){
+        console.log(parole[i]);
+    }
+};
