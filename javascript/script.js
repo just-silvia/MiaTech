@@ -78,6 +78,12 @@
 //     let parola = prompt("Inserisci una parola.");
 //     parole.push(parola);
 // };
+// console.log(parole);
+// for(let i = 0; i < parole.length; i++){
+//     if(parole[i].length % 2 !== 0){
+//         console.log(parole[i]);
+//     }
+// };
 
 // let person = {
 //     name : "Silvia",
@@ -108,10 +114,12 @@
 //     let count = 0;
 //     return{
 //         increment : function(){
-//             return ++count;
+//             count++
+//             return count;
 //         },
 //         decrement : function(){
-//             return --count;
+//             count--
+//             return count;
 //         }
 //     };
 // }
@@ -120,14 +128,20 @@
 // console.log(counter.decrement()); 
 // console.log(counter.decrement()); 
 
-let student = {
-    name : "Mario Rossi",
-    age : 16,
-    grade : "6th",
-    school : "Claudio Varalli"
-};
-console.log(Object.entries(student));
+// let student = {
+//     name : "Mario Rossi",
+//     age : 16,
+//     grade : "6th",
+//     school : "Claudio Varalli"
+// };
+// console.log(Object.entries(student));
 
-for (let [key, value] of Object.entries(student)) {
-    console.log(`${key} : ${value}`);
-};
+// for (let [key, value] of Object.entries(student)) {
+//     console.log(`${key} : ${value}`);
+// };
+
+const numbers = [1,2,3,4,5];
+numbers.forEach(number => console.log(number * 2));
+
+const squaredNumbers = numbers.map((x) => x * x);
+console.log(squaredNumbers);
