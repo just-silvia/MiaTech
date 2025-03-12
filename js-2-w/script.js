@@ -33,3 +33,25 @@ class Automobile {
 const myCar = new Automobile("Volkswagen", "Polo", "2019", 20000);
 myCar.aggiungiChilometri(1000);
 console.log(myCar.descrizione(), myCar.mostraChilometraggio());
+
+//TERZO ESERCIZIO
+
+class Elettrica extends Automobile{
+    constructor(marca, modello, anno, chilometraggio, autonomia){
+        super(marca, modello, anno, chilometraggio)
+        this.autonomia = autonomia;
+    }
+    aggiungiAutonomia(km){
+        this.autonomia += km;
+    }
+    mostraAutonomia(){
+        return `L'autonomia è di: ${this.autonomia} km.`
+    }
+    descrizione(){
+        return `${super.descrizione()}, ${this.autonomia} km`
+    }
+}
+const myElectricCar = new Elettrica ("Fiat", "500e", "2022", 15000, 500);
+myElectricCar.aggiungiChilometri(500);
+myElectricCar.aggiungiAutonomia(100);
+console.log(myElectricCar.descrizione(), myElectricCar.mostraChilometraggio(), myElectricCar.mostraAutonomia());
