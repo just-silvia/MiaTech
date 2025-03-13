@@ -58,7 +58,7 @@ console.log(myElectricCar.descrizione(), myElectricCar.mostraChilometraggio(), m
 
 //QUARTO ESERCIZIO
 
-class Automobile {
+/*class Automobile {
     constructor(marca, modello){
         this.marca = marca;
         this.modello = modello;
@@ -71,4 +71,35 @@ Automobile.prototype.saluta = function() {
     return "Ciao!";
 };
 const myCar = new Automobile("Volkswagen", "Polo");
-console.log(myCar.saluta(), myCar.descrizione());
+console.log(myCar.saluta(), myCar.descrizione());*/
+
+//QUINTO ESERCIZIO
+
+class Automobile {
+    constructor(marca, modello, anno, chilometraggio){
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+        this.chilometraggio = chilometraggio;
+    }
+    #calcolaEtà(){
+        const yearNow = new Date().getFullYear();
+        return yearNow - this.anno;
+    }
+    mostraEtà(){
+        return this.#calcolaEtà();
+    }
+    aggiungiChilometri(km){
+        this.chilometraggio += km;
+    }
+    mostraChilometraggio(){
+        return `Il chilometraggio è: ${this.chilometraggio}`
+    }
+    descrizione(){
+        return `${this.marca} ${this.modello} ${this.anno}`;
+    }
+};
+const myCar = new Automobile("Volkswagen", "Polo", "2019", 20000);
+/*myCar.aggiungiChilometri(1000);
+console.log(myCar.descrizione(), myCar.mostraChilometraggio());*/
+console.log(myCar.mostraEtà());
