@@ -431,10 +431,24 @@ class Automobile {
     }
 };
 
-const myCar = new Automobile("Fiat", "500", 12000);
+/*const myCar = new Automobile("Fiat", "500", 12000);
 myCar.aggiungiChilometri(100);
 console.log(myCar.chilometraggio);
 myCar.chilometraggio = 900;
 console.log(myCar.chilometraggio);
 myCar.chilometraggio = 20500;
-console.log(myCar.chilometraggio); 
+console.log(myCar.chilometraggio);*/
+
+//TREDICESIMO ESERCIZIO
+
+class Camion extends Automobile{
+    constructor(marca, modello, chilometraggio){
+        super(marca, modello, chilometraggio)
+    }
+    descrizione(){
+        return `${super.descrizione()}`
+    }
+};
+
+const myCamion = new Camion("Iveco", "Eurocargo", 50000);
+console.log(myCamion);
