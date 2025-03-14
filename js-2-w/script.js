@@ -381,6 +381,109 @@ console.log(myCar.chilometraggio);*/
 
 //DODICESIMO ESERCIZIO
 
+/*class Automobile {
+    constructor(marca, modello, chilometraggio){
+        this.marca = marca;
+        this.modello = modello;
+        this._chilometraggio = chilometraggio;
+    }
+    #contatoreChiamate = 0;
+    #incrementaContatore(){
+        this.#contatoreChiamate++;
+    }
+    aggiungiChilometri(km){
+        this.#incrementaContatore();
+    }
+    mostraContatoreChiamate(){
+        return `Il metodo aggiungiChilometri è stato chiamato ${this.#contatoreChiamate} volte.`
+    }
+    mostraChilometraggio(){
+        return `Il chilometraggio è: ${this.chilometraggio}`
+    }
+    _controllaChilometri(){
+        if(this.chilometraggio > 100000){
+            return `Attenzione: questa macchina ha già molti chilometri!`
+        }else{
+            return "I km di questa macchina sono nella norma."
+        }
+    }
+    get chilometraggio(){
+        return this._chilometraggio;
+    }
+    set chilometraggio(valore){
+        if (valore >= this._chilometraggio){
+            this._chilometraggio = valore;
+        } else{
+            console.error("Non puoi ridurre il chilometraggio.");
+        }
+    }
+    static confrontaChilometri(auto1, auto2){
+        if(auto1.chilometraggio > auto2.chilometraggio){
+            return `${auto1.descrizione()} ha più chilometri di ${auto2.descrizione()}.`
+        }else if(auto1.chilometraggio < auto2.chilometraggio){
+            return `${auto2.descrizione()} ha più chilometri di ${auto1.descrizione()}.`
+        }else{
+            return `${auto1.descrizione()} e ${auto2.descrizione()} hanno lo stesso chilometraggio.`
+        }
+    }
+    descrizione(){
+    return `${this.marca} ${this.modello} ${this.chilometraggio}`;
+    }
+};*/
+
+/*const myCar = new Automobile("Fiat", "500", 12000);
+myCar.aggiungiChilometri(100);
+console.log(myCar.chilometraggio);
+myCar.chilometraggio = 900;
+console.log(myCar.chilometraggio);
+myCar.chilometraggio = 20500;
+console.log(myCar.chilometraggio);*/
+
+//TREDICESIMO ESERCIZIO
+
+/*class Camion extends Automobile{
+    constructor(marca, modello, chilometraggio){
+        super(marca, modello, chilometraggio)
+    }
+    descrizione(){
+        return `${super.descrizione()}`
+    }
+};
+
+const myCamion = new Camion("Iveco", "Eurocargo", 50000);
+console.log(myCamion.descrizione());*/
+
+//QUATTORDICESIMO ESERCIZIO
+
+/*class Camion extends Automobile{
+    constructor(marca, modello, chilometraggio, caricoMassimo){
+        super(marca, modello, chilometraggio);
+        this.caricoMassimo = caricoMassimo;
+        this._caricoAttuale = 0;
+    }
+
+    get caricoAttuale(){
+        return this.caricoAttuale;
+    }
+    carica(kg){
+        if (this._caricoAttuale + kg <= this.caricoMassimo){
+            this._caricoAttuale += kg;
+            console.log(`${kg} kg caricati, il carico attuale è di ${this._caricoAttuale} kg.`);
+        } else {
+            console.log(`Impossibile caricare ${kg} kg, il carico massimo di ${this.caricoMassimo} kg è statp superato.`);
+        }
+    }
+    descrizione(){
+        return `${super.descrizione()}, ${this.caricoMassimo}, ${this._caricoAttuale}`;
+    }
+};*/
+
+/*const myCamion = new Camion("Iveco", "Eurocargo", 50000, 5000);
+myCamion.carica(1000); 
+myCamion.carica(3500);*/  
+
+//QUINDICESIMO ESERCIZIO
+
 class Automobile {
     constructor(marca, modello, chilometraggio){
         this.marca = marca;
@@ -429,31 +532,14 @@ class Automobile {
     descrizione(){
     return `${this.marca} ${this.modello} ${this.chilometraggio}`;
     }
-};
-
-/*const myCar = new Automobile("Fiat", "500", 12000);
-myCar.aggiungiChilometri(100);
-console.log(myCar.chilometraggio);
-myCar.chilometraggio = 900;
-console.log(myCar.chilometraggio);
-myCar.chilometraggio = 20500;
-console.log(myCar.chilometraggio);*/
-
-//TREDICESIMO ESERCIZIO
-
-/*class Camion extends Automobile{
-    constructor(marca, modello, chilometraggio){
-        super(marca, modello, chilometraggio)
-    }
-    descrizione(){
-        return `${super.descrizione()}`
+    static verificaIstanza(obj, classe){
+        if (obj instanceof classe){
+            return `${obj.descrizione()} è un'istanza della classe ${classe.name}.`;
+        } else {
+            return `${obj.descrizione()} non è un'istanza della classe ${classe.name}.`;
+        }
     }
 };
-
-const myCamion = new Camion("Iveco", "Eurocargo", 50000);
-console.log(myCamion.descrizione());*/
-
-//QUATTORDICESIMO ESERCIZIO
 
 class Camion extends Automobile{
     constructor(marca, modello, chilometraggio, caricoMassimo){
@@ -478,6 +564,7 @@ class Camion extends Automobile{
     }
 };
 
+const myCar = new Automobile("Fiat", "500", 20000);
 const myCamion = new Camion("Iveco", "Eurocargo", 50000, 5000);
-myCamion.carica(1000); 
-myCamion.carica(3500);  
+console.log(Automobile.verificaIstanza(myCar, Automobile)); 
+console.log(Automobile.verificaIstanza(myCamion, Camion)); 
