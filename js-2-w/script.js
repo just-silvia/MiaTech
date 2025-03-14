@@ -214,7 +214,7 @@ class Automobile {
         this.modello = modello;
         this.chilometraggio = chilometraggio;
     }
-    #contatoreChiamate = 0;
+    #contatoreChiamate;
     aggiungiChilometri(km){
         this.chilometraggio += km;
     }
