@@ -441,7 +441,7 @@ console.log(myCar.chilometraggio);*/
 
 //TREDICESIMO ESERCIZIO
 
-class Camion extends Automobile{
+/*class Camion extends Automobile{
     constructor(marca, modello, chilometraggio){
         super(marca, modello, chilometraggio)
     }
@@ -451,4 +451,33 @@ class Camion extends Automobile{
 };
 
 const myCamion = new Camion("Iveco", "Eurocargo", 50000);
-console.log(myCamion);
+console.log(myCamion.descrizione());*/
+
+//QUATTORDICESIMO ESERCIZIO
+
+class Camion extends Automobile{
+    constructor(marca, modello, chilometraggio, caricoMassimo){
+        super(marca, modello, chilometraggio);
+        this.caricoMassimo = caricoMassimo;
+        this._caricoAttuale = 0;
+    }
+
+    get caricoAttuale(){
+        return this.caricoAttuale;
+    }
+    carica(kg){
+        if (this._caricoAttuale + kg <= this.caricoMassimo){
+            this._caricoAttuale += kg;
+            console.log(`${kg} kg caricati, il carico attuale è di ${this._caricoAttuale} kg.`);
+        } else {
+            console.log(`Impossibile caricare ${kg} kg, il carico massimo di ${this.caricoMassimo} kg è statp superato.`);
+        }
+    }
+    descrizione(){
+        return `${super.descrizione()}, ${this.caricoMassimo}, ${this._caricoAttuale}`;
+    }
+};
+
+const myCamion = new Camion("Iveco", "Eurocargo", 50000, 5000);
+myCamion.carica(1000); 
+myCamion.carica(3500);  
