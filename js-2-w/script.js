@@ -106,7 +106,7 @@ console.log(myCar.mostraEtà());*/
 
 //SESTO ESERCIZIO
 
-class Automobile {
+/*class Automobile {
     constructor(marca, modello, anno, chilometraggio){
         this.marca = marca;
         this.modello = modello;
@@ -130,7 +130,7 @@ class Automobile {
         if(this.chilometraggio > 100000){
             return `Attenzione: questa macchina ha già molti chilometri!`
         }else{
-            return `I km di questa macchina sono nella norma.`
+            return "I km di questa macchina sono nella norma."
         }
     }
     descrizione(){
@@ -165,4 +165,43 @@ const myElectricCar = new Elettrica ("Fiat", "500e", 2022, 15000, 500);
 myElectricCar.aggiungiChilometri(500);
 myElectricCar.aggiungiAutonomia(100);
 // console.log(myElectricCar.descrizione(), myElectricCar.mostraChilometraggio(), myElectricCar.mostraAutonomia());
-console.log(myElectricCar.controllaChilometri());
+console.log(myElectricCar.controllaChilometri());*/
+
+//SETTIMO ESERCIZIO
+
+class Automobile {
+    constructor(marca, modello, chilometraggio){
+        this.marca = marca;
+        this.modello = modello;
+        this.chilometraggio = chilometraggio;
+    }
+    aggiungiChilometri(km){
+        this.chilometraggio += km;
+    }
+    mostraChilometraggio(){
+        return `Il chilometraggio è: ${this.chilometraggio}`
+    }
+    _controllaChilometri(){
+        if(this.chilometraggio > 100000){
+            return `Attenzione: questa macchina ha già molti chilometri!`
+        }else{
+            return "I km di questa macchina sono nella norma."
+        }
+    }
+    static confrontaChilometri(auto1, auto2){
+        if(auto1.chilometraggio > auto2.chilometraggio){
+            return `${auto1.descrizione()} ha più chilometri di ${auto2.descrizione()}.`
+        }else if(auto1.chilometraggio < auto2.chilometraggio){
+            return `${auto2.descrizione()} ha più chilometri di ${auto1.descrizione()}.`
+        }else{
+            return `${auto1.descrizione()} e ${auto2.descrizione()} hanno lo stesso chilometraggio.`
+        }
+    }
+    descrizione(){
+    return `${this.marca} ${this.modello} ${this.chilometraggio}`;
+    }
+};
+
+const auto1 = new Automobile("Toyota", "Aygo", 1200);
+const auto2 = new Automobile("Alfa Romeo", "Giulietta", 1200);
+console.log(Automobile.confrontaChilometri(auto1, auto2));
