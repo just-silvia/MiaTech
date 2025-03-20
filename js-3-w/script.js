@@ -52,10 +52,18 @@ console.log(secondNumber);
 let allNumbers = [...firstNumber, ...secondNumber];
 console.log(allNumbers);*/
 // 9
-let user = {
+/*let user = {
     name: "Mattia",
     age: 24
 }
 console.log(user);
 let updatedUser = {...user, favColor: "Green"};
-console.log(updatedUser);
+console.log(updatedUser);*/
+// 10
+
+// 11
+let numbers = [11, 12, 13, 14, 15, 16];
+let [firstNumber, secondNumber, ...rest] = numbers;
+console.log(firstNumber); 
+console.log(secondNumber); 
+console.log(rest);   
