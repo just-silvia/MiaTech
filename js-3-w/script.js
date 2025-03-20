@@ -45,9 +45,17 @@ console.log(myNumbers);
 let moreNumbers = [...myNumbers, 44, 55, 66]
 console.log(moreNumbers);*/
 // 8
-let firstNumber = [11, 5, 2002];
+/*let firstNumber = [11, 5, 2002];
 console.log(firstNumber);
 let secondNumber = [30, 4, 2000];
 console.log(secondNumber);
 let allNumbers = [...firstNumber, ...secondNumber];
-console.log(allNumbers);
+console.log(allNumbers);*/
+// 9
+let user = {
+    name: "Mattia",
+    age: 24
+}
+console.log(user);
+let updatedUser = {...user, favColor: "Green"};
+console.log(updatedUser);
