@@ -29,7 +29,7 @@ console.log("Ciao! mi chiamo", nome, cognome, "ho", anni, "e adoro i", hobby, "!
 let {nome : name, cognome, anni : age, hobby} = user;
 console.log("Ciao! mi chiamo", name, cognome, "ho", age, "e adoro i", hobby, "!");*/
 // 6
-let fruits = {
+/*let fruits = {
     name: "apple",
     color: "red"
 }
@@ -38,4 +38,9 @@ console.log(fruits);
 otherInfo.ripening = "ripe";
 otherInfo.taste = "sweet";
 let updatedFruits = {name, color, ...otherInfo};
-console.log(updatedFruits);
+console.log(updatedFruits);*/
+// 7
+let myNumbers = [11, 22, 33];
+console.log(myNumbers);
+let moreNumbers = [...myNumbers, 44, 55, 66]
+console.log(moreNumbers);
