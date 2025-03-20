@@ -40,7 +40,14 @@ otherInfo.taste = "sweet";
 let updatedFruits = {name, color, ...otherInfo};
 console.log(updatedFruits);*/
 // 7
-let myNumbers = [11, 22, 33];
+/*let myNumbers = [11, 22, 33];
 console.log(myNumbers);
 let moreNumbers = [...myNumbers, 44, 55, 66]
-console.log(moreNumbers);
+console.log(moreNumbers);*/
+// 8
+let firstNumber = [11, 5, 2002];
+console.log(firstNumber);
+let secondNumber = [30, 4, 2000];
+console.log(secondNumber);
+let allNumbers = [...firstNumber, ...secondNumber];
+console.log(allNumbers);
