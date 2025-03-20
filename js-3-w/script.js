@@ -62,8 +62,20 @@ console.log(updatedUser);*/
 // 10
 
 // 11
-let numbers = [11, 12, 13, 14, 15, 16];
+/*let numbers = [11, 12, 13, 14, 15, 16];
 let [firstNumber, secondNumber, ...rest] = numbers;
 console.log(firstNumber); 
 console.log(secondNumber); 
-console.log(rest);   
+console.log(rest);*/
+// 12
+let user = {
+    firstName: "Silvia",
+    lastName: "Barbagallo",
+    age: "22",
+    hobby: "videogiochi",
+    favColor: "pink"
+};
+let {firstName, lastName, ...rest} = user;
+console.log(firstName); 
+console.log(lastName); 
+console.log(rest);
