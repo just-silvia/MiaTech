@@ -88,11 +88,15 @@ console.log(firstName);
 console.log(lastName); 
 console.log(rest);*/
 // 13
-const user = {
+/*const user = {
     firstName: "Silvia",
     lastName: "Barbagallo",
     age: 22
 };
 let json = JSON.stringify(user);
 console.log(typeof json);
-console.log(json);
+console.log(json);*/
+// 14
+let userData = '{"firstName":"Silvia","lastName":"Barbagallo","age":22}';
+let user = JSON.parse(userData);
+console.log(user);
