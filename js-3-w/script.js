@@ -61,6 +61,16 @@ let updatedUser = {...user, favColor: "Green"};
 console.log(updatedUser);*/
 // 10
 
+function sum (...theArgs){
+    let total = 0;
+    for(let i = 0; i < theArgs.length; i++){
+        total += theArgs[i];
+    }
+    return total
+}
+const result = sum(1, 2, 3);
+console.log(result);
+
 // 11
 /*let numbers = [11, 12, 13, 14, 15, 16];
 let [firstNumber, secondNumber, ...rest] = numbers;
@@ -68,7 +78,7 @@ console.log(firstNumber);
 console.log(secondNumber); 
 console.log(rest);*/
 // 12
-let user = {
+/*let user = {
     firstName: "Silvia",
     lastName: "Barbagallo",
     age: "22",
@@ -78,4 +88,4 @@ let user = {
 let {firstName, lastName, ...rest} = user;
 console.log(firstName); 
 console.log(lastName); 
-console.log(rest);
+console.log(rest);*/
