@@ -107,7 +107,14 @@ family.push({name: "Mattia", age: 24});
 let newNameList = JSON.stringify(family);
 console.log(newNameList);*/
 // 16
+/*let nome = "Silvia";
+let cognome = "Barbagallo";
+let fullName = `${nome} ${cognome}`.toString();
+console.log(fullName);*/
+// 17
 let nome = "Silvia";
 let cognome = "Barbagallo";
-let fullName = `${nome} ${cognome}`;
-console.log(fullName);
+let eta = 22;
+let citta = "Milano";
+let userInfo = `nome: ${nome}, cognome: ${cognome}, età: ${eta}, città: ${citta}`.toString();
+console.log(userInfo);
