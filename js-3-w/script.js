@@ -60,8 +60,7 @@ console.log(user);
 let updatedUser = {...user, favColor: "Green"};
 console.log(updatedUser);*/
 // 10
-
-function sum (...theArgs){
+/*function sum (...theArgs){
     let total = 0;
     for(let i = 0; i < theArgs.length; i++){
         total += theArgs[i];
@@ -69,8 +68,7 @@ function sum (...theArgs){
     return total
 }
 const result = sum(1, 2, 3);
-console.log(result);
-
+console.log(result);*/
 // 11
 /*let numbers = [11, 12, 13, 14, 15, 16];
 let [firstNumber, secondNumber, ...rest] = numbers;
@@ -89,3 +87,12 @@ let {firstName, lastName, ...rest} = user;
 console.log(firstName); 
 console.log(lastName); 
 console.log(rest);*/
+// 13
+const user = {
+    firstName: "Silvia",
+    lastName: "Barbagallo",
+    age: 22
+};
+let json = JSON.stringify(user);
+console.log(typeof json);
+console.log(json);
