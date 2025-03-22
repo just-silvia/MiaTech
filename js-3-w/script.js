@@ -101,8 +101,13 @@ console.log(json);*/
 let user = JSON.parse(userData);
 console.log(user);*/
 // 15
-let nameList = '[{"name": "Silvia", "age": 22}, {"name": "Giorgia", "age": 36}, {"name": "Federica", "age": 29}, {"name": "Alessandra", "age": 56}, {"name": "Giovanni", "age": 58}]';
+/*let nameList = '[{"name": "Silvia", "age": 22}, {"name": "Giorgia", "age": 36}, {"name": "Federica", "age": 29}, {"name": "Alessandra", "age": 56}, {"name": "Giovanni", "age": 58}]';
 let family = JSON.parse(nameList);
 family.push({name: "Mattia", age: 24});
 let newNameList = JSON.stringify(family);
-console.log(newNameList);
+console.log(newNameList);*/
+// 16
+let nome = "Silvia";
+let cognome = "Barbagallo";
+let fullName = `${nome} ${cognome}`;
+console.log(fullName);
