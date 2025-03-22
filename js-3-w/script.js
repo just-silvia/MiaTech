@@ -97,6 +97,12 @@ let json = JSON.stringify(user);
 console.log(typeof json);
 console.log(json);*/
 // 14
-let userData = '{"firstName":"Silvia","lastName":"Barbagallo","age":22}';
+/*let userData = '{"firstName":"Silvia","lastName":"Barbagallo","age":22}';
 let user = JSON.parse(userData);
-console.log(user);
+console.log(user);*/
+// 15
+let nameList = '[{"name": "Silvia", "age": 22}, {"name": "Giorgia", "age": 36}, {"name": "Federica", "age": 29}, {"name": "Alessandra", "age": 56}, {"name": "Giovanni", "age": 58}]';
+let family = JSON.parse(nameList);
+family.push({name: "Mattia", age: 24});
+let newNameList = JSON.stringify(family);
+console.log(newNameList);
