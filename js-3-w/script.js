@@ -224,13 +224,13 @@ stringhe("ciao!");*/
 const divisione = (a, b) => {
     try {
         let result = a / b;
-        if (b === 0) {
+        if(b === 0){
             throw new Error("non divisibile per zero");
         }
         console.log(result);
-    } catch (error) {
+    }catch(error){
         console.error(error.message);
-    } finally {
+    }finally{
         console.log("operazione completata");
     }
 };
