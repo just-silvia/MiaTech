@@ -186,7 +186,7 @@ setTimeout(() => {
     console.log("Fine intervallo.");
 }, 5000);*/
 // 25
-const divisione = (a, b) => {
+/*const divisione = (a, b) => {
     try{
         let result = a / b;
         if(b === 0){
@@ -198,4 +198,24 @@ const divisione = (a, b) => {
     }
 };
 divisione(10, 2);
-divisione(10, 0);
+divisione(10, 0);*/
+// 26
+const stringhe = (string) => {
+    try{
+        if(typeof string !== "string"){
+            throw new Error("string must be a string")
+        }
+        if(string === ""){
+            throw new Error("string is empty!")
+        }
+        console.log(string);
+    }catch(error){
+        console.error(error.message)
+    }
+};
+//controllo se string !== "string"
+stringhe(11);   
+//controllo se string è vuota
+stringhe("");  
+//controllo se tutto è ok
+stringhe("ciao!");    
