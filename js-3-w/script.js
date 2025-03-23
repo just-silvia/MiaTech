@@ -170,6 +170,10 @@ console.group("Alcuni membri della famiglia");
 console.table(myFamily);
 console.groupEnd();*/
 // 22
-setTimeout(() => {
+/*setTimeout(() => {
     console.log("sono passati 3 secondi")
-}, 3000);
+}, 3000);*/
+// 23
+setInterval(() => {
+    console.log("tempo passato: 2 secondi")
+}, 2000);
