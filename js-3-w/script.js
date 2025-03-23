@@ -160,7 +160,7 @@ if (!user.username || !user.password) {
     console.log("credenziali corrette.");
 };*/
 // 21
-const myFamily = [
+/*const myFamily = [
     {name: "Lena", age: 13, familyRole: "cane"},
     {name: "Vicky", age: 13, familyRole: "cane"},
     {name: "Giovanni", age: 58, familyRole: "padre"}
@@ -168,4 +168,8 @@ const myFamily = [
 console.log("La mia famiglia")
 console.group("Alcuni membri della famiglia");
 console.table(myFamily);
-console.groupEnd();
+console.groupEnd();*/
+// 22
+setTimeout(() => {
+    console.log("sono passati 3 secondi")
+}, 3000);
