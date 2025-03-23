@@ -128,10 +128,34 @@ const example = {
     job: "developer"
 };
 console.log(person(example));*/
-// 19  numero stringa array oggetto
-let myNumber = 6;
+// 19
+/*let myNumber = 6;
 console.log("Ciao! Il mio numero è: ", myNumber);
 let myArray = [2, 4, 6, 8];
 console.log("Una lista di numeri: ", myArray);
 let myObject = {name: "Silvia", surname: "Barbagallo"};
-console.log(myObject);
+console.log(myObject);*/
+// 20
+// prova console.warn
+const user = {
+    email: "",
+    password: ""
+};
+// prova console.error
+const user = {
+    username: "silvia",
+    password: "01234"
+};
+// prova console.log
+const user = {
+    username: "admin",
+    password: "1234"
+};
+
+if (!user.username || !user.password) {
+    console.warn("attenzione! Inserire le credenziali.");
+} else if (user.username !== "admin" || user.password !== "1234") {
+    console.error("errore! credenziali errate.");
+} else {
+    console.log("credenziali corrette.");
+};
