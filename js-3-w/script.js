@@ -174,6 +174,14 @@ console.groupEnd();*/
     console.log("sono passati 3 secondi")
 }, 3000);*/
 // 23
-setInterval(() => {
+/*setInterval(() => {
     console.log("tempo passato: 2 secondi")
-}, 2000);
+}, 2000);*/
+// 24
+const intervallo = setInterval(() => {
+    console.log("tempo passato: 1 secondo")
+}, 1000);
+setTimeout(() => {
+    clearInterval(intervallo);
+    console.log("Fine intervallo.");
+}, 5000);
