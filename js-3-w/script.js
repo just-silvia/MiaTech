@@ -178,10 +178,24 @@ console.groupEnd();*/
     console.log("tempo passato: 2 secondi")
 }, 2000);*/
 // 24
-const intervallo = setInterval(() => {
+/*const intervallo = setInterval(() => {
     console.log("tempo passato: 1 secondo")
 }, 1000);
 setTimeout(() => {
     clearInterval(intervallo);
     console.log("Fine intervallo.");
-}, 5000);
+}, 5000);*/
+// 25
+const divisione = (a, b) => {
+    try{
+        let result = a / b;
+        if(b === 0){
+            throw new Error("non divisibile per zero");
+        }
+        console.log(result);
+    }catch(error){
+        console.error(error.message);
+    }
+};
+divisione(10, 2);
+divisione(10, 0);
