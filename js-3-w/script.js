@@ -119,7 +119,7 @@ let citta = "Milano";
 let userInfo = `nome: ${nome}, cognome: ${cognome}, età: ${eta}, città: ${citta}`.toString();
 console.log(userInfo);*/
 // 18
-function person(persona){
+/*function person(persona){
     return `name: ${persona.name}, age: ${persona.age}, job: ${persona.job}`;
 };
 const example = {
@@ -127,4 +127,11 @@ const example = {
     age: 29,
     job: "developer"
 };
-console.log(person(example));
+console.log(person(example));*/
+// 19  numero stringa array oggetto
+let myNumber = 6;
+console.log("Ciao! Il mio numero è: ", myNumber);
+let myArray = [2, 4, 6, 8];
+console.log("Una lista di numeri: ", myArray);
+let myObject = {name: "Silvia", surname: "Barbagallo"};
+console.log(myObject);
