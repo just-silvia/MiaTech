@@ -200,7 +200,7 @@ setTimeout(() => {
 divisione(10, 2);
 divisione(10, 0);*/
 // 26
-const stringhe = (string) => {
+/*const stringhe = (string) => {
     try{
         if(typeof string !== "string"){
             throw new Error("string must be a string")
@@ -218,4 +218,21 @@ stringhe(11);
 //controllo se string è vuota
 stringhe("");  
 //controllo se tutto è ok
-stringhe("ciao!");    
+stringhe("ciao!");*/
+// 27
+// uso esempio di esercizio 25 
+const divisione = (a, b) => {
+    try {
+        let result = a / b;
+        if (b === 0) {
+            throw new Error("non divisibile per zero");
+        }
+        console.log(result);
+    } catch (error) {
+        console.error(error.message);
+    } finally {
+        console.log("operazione completata");
+    }
+};
+divisione(10, 2);
+divisione(10, 0); 
