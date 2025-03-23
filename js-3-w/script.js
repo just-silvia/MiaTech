@@ -136,7 +136,7 @@ console.log("Una lista di numeri: ", myArray);
 let myObject = {name: "Silvia", surname: "Barbagallo"};
 console.log(myObject);*/
 // 20
-// prova console.warn
+/*// prova console.warn
 const user = {
     email: "",
     password: ""
@@ -158,4 +158,14 @@ if (!user.username || !user.password) {
     console.error("errore! credenziali errate.");
 } else {
     console.log("credenziali corrette.");
-};
+};*/
+// 21
+const myFamily = [
+    {name: "Lena", age: 13, familyRole: "cane"},
+    {name: "Vicky", age: 13, familyRole: "cane"},
+    {name: "Giovanni", age: 58, familyRole: "padre"}
+];
+console.log("La mia famiglia")
+console.group("Alcuni membri della famiglia");
+console.table(myFamily);
+console.groupEnd();
