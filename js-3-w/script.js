@@ -112,9 +112,19 @@ let cognome = "Barbagallo";
 let fullName = `${nome} ${cognome}`.toString();
 console.log(fullName);*/
 // 17
-let nome = "Silvia";
+/*let nome = "Silvia";
 let cognome = "Barbagallo";
 let eta = 22;
 let citta = "Milano";
 let userInfo = `nome: ${nome}, cognome: ${cognome}, età: ${eta}, città: ${citta}`.toString();
-console.log(userInfo);
+console.log(userInfo);*/
+// 18
+function person(persona){
+    return `name: ${persona.name}, age: ${persona.age}, job: ${persona.job}`;
+};
+const example = {
+    name: "Jane",
+    age: 29,
+    job: "developer"
+};
+console.log(person(example));
