@@ -112,7 +112,8 @@ console.log(newNameList);*/
 let cognome = "Barbagallo";
 let fullName = `${nome} ${cognome}`.toString();
 console.log(fullName);*/
-// 17
+// 17 CORREZIONE
+// STRINGA MULTILINEA CON TEMPLATE LITERALS
 let nome = "Silvia";
 let cognome = "Barbagallo";
 let eta = 22;
