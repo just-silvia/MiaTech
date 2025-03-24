@@ -28,8 +28,9 @@ console.log("Ciao! mi chiamo", nome, cognome, "ho", anni, "e adoro i", hobby, "!
 };
 let {nome : name, cognome, anni : age, hobby} = user;
 console.log("Ciao! mi chiamo", name, cognome, "ho", age, "e adoro i", hobby, "!");*/
-// 6
-/*let fruits = {
+// 6 CORREZIONE
+// DESTRUCTURING CON VALORI PREDEFINITI
+let fruits = {
     name: "apple",
     color: "red"
 }
@@ -38,7 +39,7 @@ console.log(fruits);
 otherInfo.ripening = "ripe";
 otherInfo.taste = "sweet";
 let updatedFruits = {name, color, ...otherInfo};
-console.log(updatedFruits);*/
+console.log(updatedFruits);
 // 7
 /*let myNumbers = [11, 22, 33];
 console.log(myNumbers);
@@ -112,12 +113,17 @@ let cognome = "Barbagallo";
 let fullName = `${nome} ${cognome}`.toString();
 console.log(fullName);*/
 // 17
-/*let nome = "Silvia";
+let nome = "Silvia";
 let cognome = "Barbagallo";
 let eta = 22;
 let citta = "Milano";
-let userInfo = `nome: ${nome}, cognome: ${cognome}, età: ${eta}, città: ${citta}`.toString();
-console.log(userInfo);*/
+let userInfo = `
+nome: ${nome}, 
+cognome: ${cognome}, 
+età: ${eta}, 
+città: ${citta}
+`.toString();
+console.log(userInfo);
 // 18
 /*function person(persona){
     return `name: ${persona.name}, age: ${persona.age}, job: ${persona.job}`;
@@ -221,7 +227,7 @@ stringhe("");
 stringhe("ciao!");*/
 // 27
 // uso esempio di esercizio 25 
-const divisione = (a, b) => {
+/*const divisione = (a, b) => {
     try {
         let result = a / b;
         if(b === 0){
@@ -235,4 +241,4 @@ const divisione = (a, b) => {
     }
 };
 divisione(10, 2);
-divisione(10, 0); 
+divisione(10, 0);*/ 
