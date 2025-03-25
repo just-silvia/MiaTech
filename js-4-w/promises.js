@@ -21,7 +21,7 @@ promise.catch(
     error => console.error(error.message)
 );*/
 // 6 Promessa con finally
-let promise = new Promise((onSuccess, onError) => {
+/*let promise = new Promise((onSuccess, onError) => {
     onSuccess("Ciao!")
 });
 promise.finally(
@@ -29,4 +29,19 @@ promise.finally(
 );
 promise.then(
     onSuccess => console.log(onSuccess)
-);
+);*/
+// 7 Catena di promesse semplici
+new Promise((onSuccess, onError) => {
+    setTimeout(() => onSuccess(2), 1000);
+
+}).then((result) => {
+    console.log(result);
+    return result * 2;
+
+}).then((result) => {
+    console.log(result);
+    return result + 3;
+    
+}).then((result) => {
+    console.log(result);
+});
