@@ -27,3 +27,17 @@ operazioni(2, 8, "addizione", (risultato) => {
 operazioni(20, 2, "divisione", (risultato) => {
     console.log(risultato)
 });
+// 3 Callback annidati
+const time = (callback) => {
+    setInterval(() => {
+        callback("intervallo di 2 secondi")
+    }, 2000);
+
+    setTimeout(() => {
+        clearInterval(time);
+        callback("fine intervallo");
+    }, 6000);
+};
+time((message) => {
+    console.log(message);
+});
