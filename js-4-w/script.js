@@ -7,7 +7,7 @@ somma(2, 2, (risultato) => {
     console.log(risultato)
 });*/
 // 2. Funzione con callback e passaggio di parametri
-const operazioni = (a, b, operazione, callback) => {
+/*const operazioni = (a, b, operazione, callback) => {
     if(operazione === "moltiplicazione"){
         callback(a * b);
     }
@@ -26,7 +26,7 @@ operazioni(2, 8, "addizione", (risultato) => {
 });
 operazioni(20, 2, "divisione", (risultato) => {
     console.log(risultato)
-});
+});*/
 // 3 Callback annidati
 const time = (callback) => {
     setInterval(() => {
