@@ -111,7 +111,7 @@ newPromise()
     console.log("Fine");
 });*/
 // 10 Gestione degli errori con catch
-function newPromise(){
+/*function newPromise(){
     return new Promise((resolve, reject) => {
         reject("Si è verificato un errore");
     })
@@ -123,4 +123,37 @@ newPromise()
     console.error(error)
 }).finally(() => {
     console.log("fine")
+});*/
+// 11 Gestione degli errori con then e catch
+function newPromise(siRisolve){
+    return new Promise((resolve, reject) => {
+        if(siRisolve === true){
+            resolve("Operazione eseguita")
+        }
+        if(siRisolve === false){
+            reject("Operazione fallita");
+        }
+    })
+};
+// promessa risolta
+newPromise(true)
+.then((successMessage) => {
+    console.log(successMessage)
+})
+.catch((errorMessage) => {
+    console.error(errorMessage)
+})
+.finally(() => {
+    console.log("operazione completata")
+});
+// promessa fallita
+newPromise(false)
+.then((successMessage) => {
+    console.log(successMessage)
+})
+.catch((error) => {
+    console.error(error)
+})
+.finally(() => {
+    console.log("operazione completata")
 });
