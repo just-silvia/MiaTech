@@ -125,7 +125,7 @@ newPromise()
     console.log("fine")
 });*/
 // 11 Gestione degli errori con then e catch
-function newPromise(siRisolve){
+/*function newPromise(siRisolve){
     return new Promise((resolve, reject) => {
         if(siRisolve === true){
             resolve("Operazione eseguita")
@@ -156,4 +156,26 @@ newPromise(false)
 })
 .finally(() => {
     console.log("operazione completata")
+});*/
+// 12 Gestione degli errori in una catena di promesse
+function newPromise(){
+    return new Promise((resolve, reject) => {
+        const value = Math.random();
+        console.log(value);
+        if(value < 0.7){
+            resolve("Valore valido")
+        }else{
+            reject("Valore non valido")
+        }
+    })
+};
+newPromise()
+.then((successMessage) => {
+    console.log(successMessage);
+})
+.catch((errorMessage) => {
+    console.error(errorMessage);
+})
+.finally(() => {
+    console.log("Fine");
 });
