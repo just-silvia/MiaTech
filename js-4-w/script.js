@@ -1,11 +1,14 @@
 // CALLBACKS
 // 1. Funzione di base con callback
-/*const somma = (a, b, callback) => {
-    callback(a + b);
+const somma = (a, b, callback) => {
+    let risultato = a + b;
+    console.log(risultato);
+    callback();
 };
-somma(2, 2, (risultato) => {
-    console.log(risultato)
-});*/
+function callback(){
+    console.log("operazione eseguita")
+};
+somma(2, 2, callback);
 // 2. Funzione con callback e passaggio di parametri
 /*const operazioni = (a, b, operazione, callback) => {
     if(operazione === "moltiplicazione"){
@@ -28,7 +31,7 @@ operazioni(20, 2, "divisione", (risultato) => {
     console.log(risultato)
 });*/
 // 3 Callback annidati
-const time = (callback) => {
+/*const time = (callback) => {
     setInterval(() => {
         callback("intervallo di 2 secondi")
     }, 2000);
@@ -40,4 +43,4 @@ const time = (callback) => {
 };
 time((message) => {
     console.log(message);
-});
+});*/
