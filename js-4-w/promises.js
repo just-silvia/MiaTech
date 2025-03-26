@@ -1,5 +1,5 @@
 // 4 Creare una promessa semplice
-function newPromise(){
+/*function newPromise(){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve("promise risolta");
@@ -9,17 +9,22 @@ function newPromise(){
 newPromise()
 .then((data) => {
     console.log(data);
-});
+});*/
 
 // 5 Gestione di una promessa con catch
-/*let promise = new Promise((onSuccess, onError) => {
-    setTimeout(() => {
-        onError(new Error("errore"))
-    }, 2000);
+function newPromise(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject("promise rifiutata");
+        }, 2000);
+    })
+};
+newPromise()
+.then((data) => {
+    console.log(data);
+}).catch((error) => {
+    console.error(error);
 });
-promise.catch(
-    error => console.error(error.message)
-);*/
 // 6 Promessa con finally
 /*let promise = new Promise((onSuccess, onError) => {
     onSuccess("Ciao!")
