@@ -84,7 +84,7 @@ newPromise(9)
 });*/
 
 // 9 Catena di promesse con gestione di errori
-function newPromise(){
+/*function newPromise(){
     return new Promise((resolve, reject) => {
         const value = Math.random();
         console.log(value);
@@ -104,6 +104,23 @@ newPromise()
     return newValue - 1
 }).catch((error) => {
     console.error("Valore non valido", (error));
+}).then((newValue) => {
+    console.log("primo valore valido");
+    return newValue * 4
 }).finally(() => {
     console.log("Fine");
+});*/
+// 10 Gestione degli errori con catch
+function newPromise(){
+    return new Promise((resolve, reject) => {
+        reject("Si è verificato un errore");
+    })
+};
+newPromise()
+.then(() => {
+    console.log("Questa promessa non viene eseguita")
+}).catch((error) => {
+    console.error(error)
+}).finally(() => {
+    console.log("fine")
 });
