@@ -1,16 +1,16 @@
 // 4 Creare una promessa semplice
-/*let promise = new Promise((onSuccess, onError) => {
-    setTimeout(() => {
-        onSuccess("risolto")
-    }, 2000);
-    setTimeout(() => {
-        onError("errore")
-    }, 2000);
+function newPromise(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("promise risolta");
+        }, 2000);
+    })
+};
+newPromise()
+.then((data) => {
+    console.log(data);
 });
-promise.then(
-    onSuccess => console.log(onSuccess),
-    onError => console.error(onError)
-);*/
+
 // 5 Gestione di una promessa con catch
 /*let promise = new Promise((onSuccess, onError) => {
     setTimeout(() => {
@@ -46,7 +46,7 @@ promise.then(
     console.log(result);
 });*/
 // 8 Catena di promesse con condizioni
-let verificaNumero = (numero) => {
+/*let verificaNumero = (numero) => {
     return new Promise((onSuccess) => {
         setTimeout(() => {
             onSuccess(numero);
@@ -63,4 +63,4 @@ let verificaNumero = (numero) => {
     });
 };
 verificaNumero(6);
-verificaNumero(7);
+verificaNumero(7);*/
