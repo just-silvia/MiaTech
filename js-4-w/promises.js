@@ -26,7 +26,7 @@ newPromise()
     console.error(error);
 });*/
 // 6 Promessa con finally
-function newPromise(){
+/*function newPromise(){
     return new Promise((resolve, reject) => {
         resolve("Ciao!")
     })
@@ -38,13 +38,16 @@ newPromise()
     console.error(error);
 }).finally(() => {
     console.log("Funziona a prescindere");
-});
+});*/
 
 // 7 Catena di promesse semplici
-/*new Promise((onSuccess, onError) => {
-    setTimeout(() => onSuccess(2), 1000);
-
-}).then((result) => {
+function newPromise(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(2), 1000);
+    })
+};
+newPromise()
+.then((result) => {
     console.log(result);
     return result * 2;
 
@@ -54,7 +57,8 @@ newPromise()
     
 }).then((result) => {
     console.log(result);
-});*/
+});
+
 // 8 Catena di promesse con condizioni
 /*let verificaNumero = (numero) => {
     return new Promise((onSuccess) => {
