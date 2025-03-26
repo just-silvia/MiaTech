@@ -34,12 +34,8 @@ let fruits = {
     name: "apple",
     color: "red"
 }
-let {name, color, ...otherInfo} = fruits;
-console.log(fruits);
-otherInfo.ripening = "ripe";
-otherInfo.taste = "sweet";
-let updatedFruits = {name, color, ...otherInfo};
-console.log(updatedFruits);
+let {name, color, ripening = "ripe", taste = "sweet"} = fruits;
+console.log(name, color, ripening, taste);
 // 7
 /*let myNumbers = [11, 22, 33];
 console.log(myNumbers);
@@ -114,7 +110,7 @@ let fullName = `${nome} ${cognome}`.toString();
 console.log(fullName);*/
 // 17 CORREZIONE
 // STRINGA MULTILINEA CON TEMPLATE LITERALS
-let nome = "Silvia";
+/*let nome = "Silvia";
 let cognome = "Barbagallo";
 let eta = 22;
 let citta = "Milano";
@@ -124,7 +120,7 @@ cognome: ${cognome},
 età: ${eta}, 
 città: ${citta}
 `.toString();
-console.log(userInfo);
+console.log(userInfo);*/
 // 18
 /*function person(persona){
     return `name: ${persona.name}, age: ${persona.age}, job: ${persona.job}`;
