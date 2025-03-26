@@ -41,7 +41,7 @@ newPromise()
 });*/
 
 // 7 Catena di promesse semplici
-function newPromise(){
+/*function newPromise(){
     return new Promise((resolve, reject) => {
         setTimeout(() => resolve(2), 1000);
     })
@@ -57,24 +57,28 @@ newPromise()
     
 }).then((result) => {
     console.log(result);
-});
+});*/
 
-// 8 Catena di promesse con condizioni
-/*let verificaNumero = (numero) => {
-    return new Promise((onSuccess) => {
+// 8 Catena di promesse con condizioni 
+// attenzione alla consegna, prima crea la funzione che restituisce la promise, 
+// poi utilizza then e catch per risolverla, ricordati di manipolare il numero come richiesto
+// Creare una funzione che restituisca una promessa che si risolve con un numero dopo 1 secondo. 
+// Utilizzare then per creare una catena di promesse che verifichi se il numero è pari o dispari, e manipolare il numero di conseguenza. Stampare il risultato finale.
+function newPromise(numero){
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            onSuccess(numero);
-            console.log(numero);
+            resolve(numero);
         }, 1000);
-    }).then((numero) => {
-        if(numero % 2 === 0){
-            console.log("pari");
-        }else{
-            console.log("dispari");
-        }
-    }).then(() => {
-        console.log("risultato");
-    });
+    })
 };
-verificaNumero(6);
-verificaNumero(7);*/
+newPromise(9)
+.then((numero) => {
+    if(numero % 2 === 0){
+        console.log("pari");
+    }else{
+        console.log("dispari");
+    }
+    return  numero;
+}).then(() => {
+    console.log("risultato");
+});
