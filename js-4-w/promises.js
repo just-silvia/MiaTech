@@ -158,7 +158,7 @@ newPromise(false)
     console.log("operazione completata")
 });*/
 // 12 Gestione degli errori in una catena di promesse
-function newPromise(){
+/*function newPromise(){
     return new Promise((resolve, reject) => {
         const value = Math.random();
         console.log(value);
@@ -178,4 +178,22 @@ newPromise()
 })
 .finally(() => {
     console.log("Fine");
+});*/
+// 13 Utilizzare Promise.all
+function firstPromise(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Prima promessa risolta")
+        }, 3000)
+    })
+};
+function secondPromise(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Seconda promessa risolta")
+        }, 5000)
+    })
+};
+Promise.all([firstPromise(), secondPromise()]).then((results) => {
+    console.log(results)
 });
