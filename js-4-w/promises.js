@@ -198,7 +198,7 @@ Promise.all([firstPromise(), secondPromise()]).then((results) => {
     console.log(results)
 });*/
 // 14 Utilizzare Promise.race
-function firstPromise(){
+/*function firstPromise(){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve("Prima promessa");
@@ -214,4 +214,30 @@ function secondPromise(){
 };
 Promise.race([firstPromise(), secondPromise()]).then((result) => {
     console.log(result);
-});
+});*/
+// 15 Utilizzare Promise.allSettled
+function firstPromise(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("promessa risolta");
+        }, 1000)
+    })
+};
+function secondPromise(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("promessa risolta");
+        }, 3000)
+    })
+};
+function thirdPromise(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject("promessa rifiutata");
+        }, 2000)
+    })
+};
+const promises = [firstPromise(), secondPromise(), thirdPromise()];
+Promise.allSettled(promises).then((result) => {
+    console.log(result);
+})
