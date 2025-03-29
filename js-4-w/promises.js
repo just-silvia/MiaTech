@@ -180,7 +180,7 @@ newPromise()
     console.log("Fine");
 });*/
 // 13 Utilizzare Promise.all
-function firstPromise(){
+/*function firstPromise(){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve("Prima promessa risolta")
@@ -196,4 +196,22 @@ function secondPromise(){
 };
 Promise.all([firstPromise(), secondPromise()]).then((results) => {
     console.log(results)
+});*/
+// 14 Utilizzare Promise.race
+function firstPromise(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Prima promessa");
+        }, 1000)
+    })
+};
+function secondPromise(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Seconda promessa");
+        }, 3000)
+    })
+};
+Promise.race([firstPromise(), secondPromise()]).then((result) => {
+    console.log(result);
 });
