@@ -9,7 +9,7 @@
     });
 };*/
 // 20 Eseguire una richiesta POST
-function postRequest() {
+/*function postRequest() {
     const url = "https://catfact.ninja/fact";
     const data = {
         fact: "cats can sleep up to 18 hours a day."
@@ -30,4 +30,16 @@ function postRequest() {
             console.error(error);
         });
 };
-postRequest();
+postRequest();*/
+// 21 Gestione degli errori con async e await
+async function jokes(){
+    const url = "https://official-joke-api.appspot.com/random_joke";
+    try{
+        let response = await fetch(url);
+        let data = await response.json();
+        console.log(`${data.setup} - ${data.punchline}`);
+    }catch(error){
+        console.error(error);
+    }
+};
+jokes();
