@@ -16,4 +16,13 @@ fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
   }
 }*/
 // 23 Utilizzare un proxy per bypassare CORS
+async function getData(){
+    try{
+        const response = await fetch("https://cors-anywhere.herokuapp.com/https://www.google.com/")
+        const data = await response.json()
+        console.log(data)
+    }catch(error){
+        console.error(error)
+    }
+};
 // 24 Utilizzare un API che supporta CORS
