@@ -1,5 +1,5 @@
 // 22 Comprendere un errore CORS
-fetch("https://api.coindesk.com/v1/bpi/currentprice.json") 
+/*fetch("https://api.coindesk.com/v1/bpi/currentprice.json") 
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error(error));
@@ -16,7 +16,7 @@ fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
   }
 }*/
 // 23 Utilizzare un proxy per bypassare CORS
-async function getData(){
+/*async function getData(){
     try{
         const response = await fetch("https://cors-anywhere.herokuapp.com/https://www.google.com/")
         const data = await response.json()
@@ -24,5 +24,9 @@ async function getData(){
     }catch(error){
         console.error(error)
     }
-};
+};*/
 // 24 Utilizzare un API che supporta CORS
+fetch("https://proxy.cors.sh/") 
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
