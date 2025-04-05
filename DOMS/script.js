@@ -16,8 +16,14 @@ let $paragraph = document.getElementById("paragraph");
 $paragraph.addEventListener("click", () => {
     $paragraph.innerText = "cliccato!";
 });*/
-// 9 Cambia lo stile NON FUNZIONA CHIEDI A MANFREDI
-/*let $paragraph = document.getElementById("paragraph");
+// 9 Cambia lo stile
+/*
+let $paragraph = document.getElementById("paragraph");
+$paragraph.style.backgroundColor = "tomato";
+$paragraph.style.fontSize = "30px";      
+*/
+// 10 Modifica l'HTML
+let $paragraph = document.getElementById("paragraph");
 // aggiungo un bottone nel paragrafo
 $paragraph.innerHTML += '<button id="myButton">Nuovo Bottone</button>';
 // funzione che aggiunge il bottone dopo aver cliccato
@@ -27,5 +33,4 @@ function addButtonEventListener() {
     $myButton.addEventListener("click", () => {
         console.log("Bottone aggiunto!");
     });
-};*/
-// 10 
+};
