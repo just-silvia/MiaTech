@@ -23,7 +23,7 @@ $paragraph.style.backgroundColor = "tomato";
 $paragraph.style.fontSize = "30px";      
 */
 // 10 Modifica l'HTML
-let $paragraph = document.getElementById("paragraph");
+/*let $paragraph = document.getElementById("paragraph");
 // aggiungo un bottone nel paragrafo
 $paragraph.innerHTML += '<button id="myButton">Nuovo Bottone</button>';
 // funzione che aggiunge il bottone dopo aver cliccato
@@ -33,4 +33,13 @@ function addButtonEventListener() {
     $myButton.addEventListener("click", () => {
         console.log("Bottone aggiunto!");
     });
-};
+};*/
+// 11 Crea una lista
+const newList = document.createElement("ul");
+const elements = ["Blu", "Giallo", "Rosa"];
+elements.forEach(function(item){
+    const li = document.createElement("li");
+    li.textContent = item;        
+    ul.appendChild(li);            
+});
+document.body.appendChild(newList);
