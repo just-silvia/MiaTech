@@ -43,3 +43,10 @@ elements.forEach(function(item){
     ul.appendChild(li);            
 });
 document.body.appendChild(newList);
+// 12 Crea i list items
+const moreElements = ["Verde", "Rosso", "Grigio", "Azzurro", "Marrone"];
+moreElements.forEach(function(item){
+    const li = document.createElement("li");
+    li.textContent = item;
+    newList.appendChild(li);
+});
