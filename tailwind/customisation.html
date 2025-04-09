@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -12,11 +13,21 @@
                 extend: {
                     colors: {
                         primary: "#FAB7DC",
+                        secondary: "#3E3C55",
+                        tertiary: "#f7edf3"
                     },
                     spacing: {
-                    '72' : '18rem',
-                    '128': '32rem',
-                    '144': '36rem',
+                        '72': '18rem',
+                        '128': '32rem',
+                        '144': '36rem',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Arial', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'xl': '1.5rem',
+                        '2xl': '2rem',
+                        '3xl': '3rem',
                     }
                 }
             }
@@ -24,8 +35,9 @@
     </script>
 </head>
 
-<body>
-    <div class="bg-primary border-4 border-black px-72 m-128">
+<body class="font-sans bg-tertiary text-secondary p-72">
+    <div class="bg-primary text-secondary rounded-xl p-4">
+        <h1 class="text-zinc-800 font-mono font-extrabold text-3xl">Hello World!</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolore nobis dolores maiores commodi? Minus
             incidunt nisi possimus accusantium ex asperiores aliquid excepturi libero aliquam similique? Vitae
             exercitationem necessitatibus sunt.</p>
