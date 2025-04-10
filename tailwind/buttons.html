@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                    blu: "#0859bd",
+                    magenta: "#fc0f62",
+                    giallo: "#ffd814",
+                    dark: "#00044B"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button class="bg-blu text-white font-semibold py-2 px-6 rounded hover:opacity-70">Scopri di più</button>
+    </div>
+    <div>
+        <button class="bg-dark text-white font-semibold py-2 px-6 rounded hover:opacity-70">Contattaci</button>
+    </div>
+    <div>
+        <button class="bg-magenta text-white font-semibold py-2 px-6 rounded hover:opacity-70">Accetta i cookie</button>
+    </div>
+    <div>
+        <button class="bg-giallo text-black font-semibold py-2 px-6 rounded hover:opacity-70">Procedi all'ordine</button>
+    </div>
+</body>
+</html>
