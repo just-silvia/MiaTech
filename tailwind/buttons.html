@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,28 +11,50 @@
             theme: {
                 extend: {
                     colors: {
-                    blu: "#0859bd",
-                    magenta: "#fc0f62",
-                    giallo: "#ffd814",
-                    dark: "#00044B"
+                        blu: "#0859bd",
+                        magenta: "#fc0f62",
+                        giallo: "#ffd814",
+                        dark: "#00044B",
+                        light: "#BBD9D0"
                     }
                 }
             }
         }
     </script>
 </head>
+
 <body>
     <div>
-        <button class="bg-blu text-white font-semibold py-2 px-6 rounded hover:opacity-70">Scopri di più</button>
-    </div>
-    <div>
-        <button class="bg-dark text-white font-semibold py-2 px-6 rounded hover:opacity-70">Contattaci</button>
-    </div>
-    <div>
-        <button class="bg-magenta text-white font-semibold py-2 px-6 rounded hover:opacity-70">Accetta i cookie</button>
-    </div>
-    <div>
-        <button class="bg-giallo text-black font-semibold py-2 px-6 rounded hover:opacity-70">Procedi all'ordine</button>
+        <div class="bg-light text-blu border-4 border-dark rounded-xl p-6 shadow-md">
+            <h2 class="text-dark text-xl font-bold mb-2">CARD 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div>
+                <button class="bg-blu text-white font-semibold py-2 px-6 rounded hover:opacity-70">Scopri di più</button>
+            </div>
+        </div>
+        <div class="bg-light text-blu border-4 border-dark rounded-xl p-6 shadow-md">
+            <h2 class="text-dark text-xl font-bold mb-2">CARD 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div>
+                <button class="bg-dark text-white font-semibold py-2 px-6 rounded hover:opacity-70">Contattaci</button>
+            </div>
+        </div>
+        <div class="bg-light text-blu border-4 border-dark rounded-xl p-6 shadow-md">
+            <h2 class="text-dark text-xl font-bold mb-2">CARD 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div>
+                <button class="bg-magenta text-white font-semibold py-2 px-6 rounded hover:opacity-70">Accetta i cookie</button>
+            </div>
+        </div>
+        <div class="bg-light text-blu border-4 border-dark rounded-xl p-6 shadow-md">
+            <h2 class="text-dark text-xl font-bold mb-2">CARD 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div>
+                <button class="bg-giallo text-black font-semibold py-2 px-6 rounded hover:opacity-70">Procedi
+                    all'ordine</button>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
