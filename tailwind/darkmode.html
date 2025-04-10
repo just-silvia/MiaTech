@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: "media",
+            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
@@ -34,5 +34,17 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <button class="bg-red-500 text-white dark:bg-sky-400 dark:text-white font-semibold py-2 px-6 rounded hover:opacity-70">Seguimi sui social!</button>
     </div>
+    <div>
+        <button id="darkModeToggle" class="border px-4 py-1 cursor-pointer">dark mode <span id="darkModeStatus">Inactive</span></button>
+    </div>
+
+    <script>
+        const toggleDarkMode = () => {
+            document.body.classList.toggle("dark");
+
+            document.querySelector("#darkModeStatus").innerHTML = document.body.classList.contains("dark") ? "Active" : "Inactive";
+        };
+        document.querySelector("#darkModeToggle").addEventListener("click", toggleDarkMode);
+    </script>
 </body>
 </html>
