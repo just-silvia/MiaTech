@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer base {
+          h1 {
+            @apply text-2xl text-slate-800 font-extrabold;
+          }
+        }
+    
+        @layer components {
+          .card {
+            @apply p-6 border-2 rounded-lg shadow-md bg-white text-center;
+          }
+    
+          .btn {
+            @apply px-4 py-2 bg-amber-200 rounded font-semibold;
+          }
+    
+          .btn-primary {
+            @apply btn bg-blue-500 text-white hover:bg-blue-600;
+          }
+        }
+
+        .custom-override {
+          background-color: pink;
+          color: black;
+        }
+      </style>
+    <title>Document</title>
+</head>
+<body>
+    <!--LAYER BASE-->
+    <h1>Titolo!</h1>
+    <!--LAYER COMPONENT CARD-->
+    <div class="card">Card</div>
+    <!--LAYER COMPONENT CARD + CUSTOM OVERRIDE-->
+    <div class="card custom-override">Card 2</div>
+    <!--LAYER COMPONENT BTN-->
+    <button class="btn">click me!</button>
+    <!--LAYER COMPONENT BTN-PRIMARY-->
+    <button class="btn-primary">click me!</button>
+</body>
+</html>
