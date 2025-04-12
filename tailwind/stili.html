@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn{
+                @apply px-5 py-2 border-2 rounded-md font-medium transition duration-200 active:ring-4;
+            }
+            .btn-primary{
+                @apply btn text-white bg-amber-500 hover:opacity-95 focus:ring-amber-700;
+            }
+            .btn-secondary{
+                @apply btn text-white bg-blue-300 hover:opacity-95 focus:ring-blue-600;
+            }
+            .card{
+                @apply p-6 border rounded-xl text-center shadow-md;
+            }
+            .card-primary{
+                @apply card bg-sky-50;
+            }
+            .card-secondary{
+                @apply card bg-pink-50;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div class="card">card base</div>
+        <div class="card-primary">card primaria</div>
+        <div class="card-secondary">card secondaria</div>
+    </div>
+    <div>
+        <button class="btn">click me</button>
+        <button class="btn-primary">click me</button>
+        <button class="btn-secondary">click me</button>
+    </div>
+</body>
+
+</html>
