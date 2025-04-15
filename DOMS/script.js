@@ -35,7 +35,7 @@ function addButtonEventListener() {
     });
 };*/
 // 11 Crea una lista
-const newList = document.createElement("ul");
+/*const newList = document.createElement("ul");
 const elements = ["Blu", "Giallo", "Rosa"];
 elements.forEach(function(item){
     const li = document.createElement("li");
@@ -49,4 +49,5 @@ moreElements.forEach(function(item){
     const li = document.createElement("li");
     li.textContent = item;
     newList.appendChild(li);
-});
+});*/
+// 12 submit
