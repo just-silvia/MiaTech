@@ -1,9 +1,7 @@
 const Counter = () => {
-    const [count] = useState(0);
-
     return (
         <>
-            <p>Count: {count}</p>
+            <div>Count: 0</div>
         </>
     );
 }
