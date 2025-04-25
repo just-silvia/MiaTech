@@ -1,22 +1,16 @@
 import React from "react"
-import ItemList from "./components/ItemList"
-
+import Card from "./components/Card"
 
 const App = () => {
-  const colori = ["red", "blue", "green", "yellow"];
-  const numeri = [1, 2, 3, 4, 5];
 
   return(
-    <div>
-      <ItemList items={colori} />
-
-      <ItemList items={numeri} />
-
-      <ItemList items={[]} />
-
-      <ItemList />
-    </div>
+    <>
+      <Card>
+        <h1>Title</h1>
+        <p>Ciao questa è una card creata con il props.children, ma non ha nessuno stile css.</p>
+      </Card>
+    </>
   )
 }
 
-export default App
+export default App 
