@@ -6,39 +6,29 @@ function useFetch(url) {
     const [error, setError] = useState(null);
 
     const fetchData = async () => {
-        if (error) setError(false);
-
-        if (!loading) setLoading(true);
+        setLoading(true);
+        setError(null);
 
         try {
-            const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+            const response = await fetch(url);
 
-            if (response.ok) {
-                setData(await response.json());
-
-                throw new Error("Error during data fetching, try again later")
+            if (!response.ok) {
+                throw new Error("Error during data fetching, try again later");
             }
+            const json = await response.json();
+            setData(json);
+            setLoading(false);
 
         } catch (error) {
             setError(error.message);
+            setLoading(false);
+            setData(null);
         }
     }
 
     useEffect(() => {
         fetchData();
-    }, []);
-
-    if(loading) {
-        return(
-            <p>loading...</p>
-        )
-    }
-
-    if(error) {
-        return(
-            <p>{error}</p>
-        )
-    }
+    }, [url]);
 
     return { data, loading, error };
 }
