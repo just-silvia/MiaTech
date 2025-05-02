@@ -20,4 +20,4 @@ const TodoProvider = ({ children }) => {
     );
 }
 
-export default {TodoContext, TodoProvider};
+export {TodoContext, TodoProvider};

@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo, useRef, useEffect, useContext } from "react";
 import useFilteredTodos from "./useFilteredTodos";
-import { TodoContext } from "./TodoContext";
+import { TodoContext } from './TodoContext';
 
 const TodoList = () => {
     const { todos, loading, error } = useContext(TodoContext); 
