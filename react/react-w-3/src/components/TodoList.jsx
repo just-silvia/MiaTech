@@ -1,9 +1,9 @@
-import React, { useState, useCallback, useMemo, useRef, useEffect } from "react";
-import useFetch from "./UseFetch";
+import React, { useState, useCallback, useMemo, useRef, useEffect, useContext } from "react";
 import useFilteredTodos from "./useFilteredTodos";
+import { TodoContext } from "./TodoContext";
 
 const TodoList = () => {
-    const { data: todos, loading, error } = useFetch('https://jsonplaceholder.typicode.com/todos');
+    const { todos, loading, error } = useContext(TodoContext); 
     const [searchTerm, setSearchTerm] = useState('');
     const inputRef = useRef(null);
 
