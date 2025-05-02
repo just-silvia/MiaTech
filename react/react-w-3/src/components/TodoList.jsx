@@ -1,10 +1,17 @@
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback, useMemo, useRef, useEffect } from "react";
 import useFetch from "./UseFetch";
 import useFilteredTodos from "./useFilteredTodos";
 
 const TodoList = () => {
     const { data: todos, loading, error } = useFetch('https://jsonplaceholder.typicode.com/todos');
     const [searchTerm, setSearchTerm] = useState('');
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, []);
 
     const filteredTodos = useMemo(() => {
         return useFilteredTodos(todos || [], searchTerm);
@@ -26,6 +33,7 @@ const TodoList = () => {
         <div>
             <h2>To-Do</h2>
             <input
+                ref={inputRef}
                 type="text"
                 placeholder="Cerca to-do..."
                 value={searchTerm}
