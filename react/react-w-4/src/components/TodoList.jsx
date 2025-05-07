@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import useFetch from "./UseFetch";
 import useFilteredTodos from "./useFilteredTodos";
+import { Link } from "react-router-dom";
 
 const TodoList = () => {
     const { data: todos, loading, error } = useFetch('https://jsonplaceholder.typicode.com/todos');
@@ -31,7 +32,9 @@ const TodoList = () => {
             <ul>
                 {filteredTodos.map(todo => (
                     <li key={todo.id}>
-                        {todo.title} {todo.completed ? '(Completato)' : '(Da completare)'}
+                        <Link to={`/todos/${todo.id}`}>
+                            {todo.title} {todo.completed ? "(Completato)" : "(Da completare)"}
+                        </Link>
                     </li>
                 ))}
             </ul>
