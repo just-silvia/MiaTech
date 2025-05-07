@@ -1,11 +1,21 @@
-import React, { useState, useCallback } from "react";
-import useFetch from "./UseFetch";
+import React, { useState, useCallback, useMemo, useRef, useEffect, useContext } from "react";
 import useFilteredTodos from "./useFilteredTodos";
+import { TodoContext } from './TodoContext';
 
 const TodoList = () => {
-    const { data: todos, loading, error } = useFetch('https://jsonplaceholder.typicode.com/todos');
+    const { todos, loading, error } = useContext(TodoContext); 
     const [searchTerm, setSearchTerm] = useState('');
-    const filteredTodos = useFilteredTodos(todos || [], searchTerm);
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, []);
+
+    const filteredTodos = useMemo(() => {
+        return useFilteredTodos(todos || [], searchTerm);
+    }, [todos, searchTerm]);
 
     const handleSearchChange = useCallback((e) => {
         setSearchTerm(e.target.value);
@@ -23,6 +33,7 @@ const TodoList = () => {
         <div>
             <h2>To-Do</h2>
             <input
+                ref={inputRef}
                 type="text"
                 placeholder="Cerca to-do..."
                 value={searchTerm}
