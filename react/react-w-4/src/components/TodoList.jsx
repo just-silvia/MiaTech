@@ -1,16 +1,19 @@
-import React, { useState, useCallback } from "react";
+import React, { useCallback } from "react";
 import useFetch from "./UseFetch";
 import useFilteredTodos from "./useFilteredTodos";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const TodoList = () => {
     const { data: todos, loading, error } = useFetch('https://jsonplaceholder.typicode.com/todos');
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const searchTerm = searchParams.get('search') || '';
     const filteredTodos = useFilteredTodos(todos || [], searchTerm);
 
     const handleSearchChange = useCallback((e) => {
-        setSearchTerm(e.target.value);
-    }, []);
+        const newSearchTerm = e.target.value;
+        setSearchParams({ search: newSearchTerm });
+    }, [setSearchParams]);
 
     if (loading) {
         return <p>Loading...</p>;
