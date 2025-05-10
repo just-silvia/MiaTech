@@ -1,0 +1,93 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10%;
+    text-align: center;
+}
+p{
+    color: pink;
+}
+.classe{
+    color: purple;
+}
+#id{
+    color: aqua;
+}
+h1{
+    color: aqua;
+}
+h2{
+    color: violet;
+}
+h3{
+    color: blue;
+}
+h4{
+    color: yellow;
+}
+#background{
+    color: green;
+    background-color: aquamarine;
+}
+h6{
+    color: red;
+} 
+.text{
+    font-size: 30px;
+}
+.bgcolor {
+    border: 2px;
+    border-radius: 5px;
+    background-color: brown;
+}
+.colors{
+    border: 2px;
+    border-radius: 5px;
+    background-color: orangered;
+    color: orange;
+}
+.flowerimg{
+    border: 2px;
+    border-radius: 5px;
+}
+h6, h2, p{
+    border: double;
+}
+a:hover{
+    color: black;
+}
+.text li:last-child::first-line{
+    color: blue;
+    background-color: rgb(133, 104, 70);
+    font-family: 'Times New Roman', Times, serif;
+}
+.left, .middle, .right{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    color: blueviolet;
+    border: dotted;
+}
+.left{
+    text-align: left;
+}
+.middle{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.rgb{
+    color: rgb(255, 0, 0);
+}
+.hex{
+    color: #ff0000;
+}
+.rgba{
+    color: rgba(255, 0, 0, 0.5);
+}
+.colorname{
+    color: red;
+}
+.container{
+    color: darkolivegreen;
+    text-align: justify;
+}

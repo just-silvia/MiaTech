@@ -1,0 +1,51 @@
+.viewport{
+    width: 100vw;
+    height: 100vw;
+    background-color: white;
+}
+.grid-container{
+    display: grid; 
+    grid-template-areas:
+    'header header header header header header'
+    'menu main main main main right'
+    'menu footer footer footer footer footer';
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    padding: 10px;
+    justify-content: center;
+}
+.grid-container div{
+    background-color: white;
+    border: 1px solid purple;
+    padding: 20px;
+    font-size: 30px;
+}
+.item1{
+    grid-area: header;
+}
+.item2{
+    grid-area: menu;
+}
+.item3{
+    grid-area: main;
+}
+.item4{
+    grid-area: right;
+}
+.item5{
+    grid-area: footer;
+}
+@media screen and (max-width: 600px){
+    body{
+      background-color: rgb(100, 11, 63);
+      font-size: 30px;
+    }
+}    
+@media screen and (min-width: 600px){
+    body{
+      background-color: rgb(100, 11, 63);
+      font-size: 80px;
+    }
+}    

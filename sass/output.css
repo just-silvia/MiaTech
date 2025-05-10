@@ -1,0 +1,78 @@
+.bg-red {
+  background-color: red;
+}
+
+.text-red {
+  color: red;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.text-blue {
+  color: blue;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.text-green {
+  color: green;
+}
+
+.navbar.dark {
+  background-color: #000000;
+  color: white;
+}
+.navbar.dark a {
+  color: white;
+}
+.navbar.dark a:hover {
+  color: yellow;
+}
+
+nav ul li:last-child {
+  background-color: yellow;
+}
+
+nav {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(108, 156, 245);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+nav ul li {
+  margin: 10px;
+  font-size: 18px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+body {
+  background-color: violet;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+.container .box_1 {
+  width: 33.3333333333%;
+  background-color: rgb(5, 69, 187);
+}
+.container .box_2 {
+  background-color: rgb(108, 156, 245);
+}
+
+/*# sourceMappingURL=output.css.map */

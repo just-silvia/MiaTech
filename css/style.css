@@ -1,0 +1,37 @@
+.card{
+    width: 15%;
+    clear: both;
+}
+.container{
+    padding: 10px;
+    border: 5px solid black;
+}
+.close{
+    position: absolute;
+    width: 1%;
+    left: 250px;
+}
+.close:hover{
+    cursor: pointer;
+}
+.column{
+    float: left;
+    padding: 10px;
+    width: 30%;
+    border: 5px solid pink;
+}
+.navbar{
+    position: fixed;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+}
+.quadrato {
+    position: absolute; 
+    bottom: 20px; 
+    right: 20px; 
+    width: 100px; 
+    height: 100px; 
+    background-color: rgb(79, 96, 192); 
+  }
