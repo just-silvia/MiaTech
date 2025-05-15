@@ -1,23 +1,17 @@
-import React from "react";
-import Layout from "./layouts/Layout";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import TodoDetail from "./pages/TodoDetail";
-import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router";
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+import TodoList from './components/TodoList';
 
-const App = () => {
+function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/todos/:id" element={<TodoDetail />} />
-        </Route>
-      </Routes>
-    </>
-  )
+    <Provider store={store}>
+      <div>
+        <h1>La mia ToDo List con Redux</h1>
+        <TodoList />
+      </div>
+    </Provider>
+  );
 }
 
 export default App;
