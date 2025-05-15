@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setTodos } from "../store/slices/todoSlice"; 
-import { Link, useSearchParams } from "react-router";
+import { setTodos, deleteTodo, toggleTodo } from "../store/slices/todoSlice";
+import { useSearchParams } from "react-router";
 
 const TodoList = () => {
   const todos = useSelector(state => state.todo.todos);
@@ -22,9 +22,16 @@ const TodoList = () => {
   );
 
   const handleSearchChange = useCallback((e) => {
-    const newSearchTerm = e.target.value;
-    setSearchParams({ search: newSearchTerm });
+    setSearchParams({ search: e.target.value });
   }, [setSearchParams]);
+
+  const handleClick = (todo) => {
+    if (todo.completed) {
+      dispatch(deleteTodo(todo.id));
+    } else {
+      dispatch(toggleTodo(todo.id));
+    }
+  };
 
   if (!todos.length) {
     return <p>Loading...</p>;
@@ -41,15 +48,21 @@ const TodoList = () => {
       />
       <ul>
         {filteredTodos.map(todo => (
-          <li key={todo.id}>
-            <Link to={`/todos/${todo.id}`}>
-              {todo.title} {todo.completed ? "(Completato)" : "(Da completare)"}
-            </Link>
+          <li
+            key={todo.id}
+            onClick={() => handleClick(todo)}
+            title={todo.completed ? "Clicca per eliminare" : "Clicca per completare"}
+            style={{
+              textDecoration: todo.completed ? 'line-through' : 'none',
+              cursor: 'pointer',
+            }}
+          >
+            {todo.title}
           </li>
         ))}
       </ul>
     </div>
   );
-}
+};
 
 export default TodoList;
