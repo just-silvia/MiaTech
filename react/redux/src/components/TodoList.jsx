@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setTodos } from "../store/slices/todoSlice"; // aggiorna il path se serve
+import { setTodos } from "../store/slices/todoSlice"; 
 import { Link, useSearchParams } from "react-router";
 
 const TodoList = () => {
@@ -10,7 +10,6 @@ const TodoList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const searchTerm = searchParams.get('search') || '';
 
-  // Fetch una volta sola e salva i todo nel Redux store
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/todos')
       .then(res => res.json())
