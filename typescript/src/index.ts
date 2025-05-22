@@ -1,4 +1,4 @@
-import { Todo } from "./types";
+import { Todo, User } from "./types";
 
 const todos: Todo[] = [];
 
@@ -20,3 +20,16 @@ const addTodo = (obj: { title: string }): Todo => {
 }
 
 addTodo({ title: "lista di todo" });
+
+//ESERCIZIO FUNZIONE addTodoToUser
+
+const addTodoToUser = (todoId: number, userId: number) => {
+    const todo = todos.find(todo => todo.id == todoId);
+    if(!todo) return false;
+    todo.userId = userId;
+    return true;
+}
+
+const result = addTodoToUser(1, 42);
+console.log(result);
+console.log(todos);
