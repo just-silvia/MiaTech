@@ -2,6 +2,8 @@ import { Todo } from "./types";
 
 const todos: Todo[] = [];
 
+//ESERCIZIO FUNZIONE addTodo
+
 let newId = 1;
 
 const addTodo = (obj: { title: string }): Todo => {
@@ -18,4 +20,3 @@ const addTodo = (obj: { title: string }): Todo => {
 }
 
 addTodo({ title: "lista di todo" });
-

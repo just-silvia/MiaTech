@@ -4,3 +4,11 @@ export interface Todo {
     completed: boolean;
     userId?: number;
 };
+
+//ESERCIZIO CREA INTERFACCIA UTENTE
+
+export interface User {
+    id: number;
+    name: string;
+    email?: string;
+};
