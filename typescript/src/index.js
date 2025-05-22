@@ -1,6 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const todos = [];
+const todos = [
+    { id: 1, title: "creare interfaccia todo", completed: true, userId: 42 },
+    { id: 2, title: "creare interfaccia user", completed: true, userId: 7 },
+    { id: 3, title: "finalizzare il progetto", completed: false, userId: 43 }
+];
 //ESERCIZIO FUNZIONE addTodo
 let newId = 1;
 const addTodo = (obj) => {
@@ -10,7 +14,7 @@ const addTodo = (obj) => {
         completed: false
     };
     todos.push(newTodo);
-    console.log(newTodo);
+    /* console.log(newTodo); */
     return newTodo;
 };
 addTodo({ title: "lista di todo" });
@@ -23,5 +27,10 @@ const addTodoToUser = (todoId, userId) => {
     return true;
 };
 const result = addTodoToUser(1, 42);
-console.log(result);
-console.log(todos);
+/* console.log(result);
+console.log(todos); */
+//ESERCIZIO FUNZIONE getUserTodos
+const getUserTodos = (userId) => {
+    return todos.filter(todo => todo.userId == userId);
+};
+console.log(getUserTodos(43));

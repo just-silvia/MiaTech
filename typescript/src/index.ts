@@ -1,6 +1,10 @@
-import { Todo, User } from "./types";
+import { Todo } from "./types";
 
-const todos: Todo[] = [];
+const todos: Todo[] = [
+    { id: 1, title: "creare interfaccia todo", completed: true, userId: 42 },
+    { id: 2, title: "creare interfaccia user", completed: true, userId: 7 },
+    { id: 3, title: "finalizzare il progetto", completed: false, userId: 43 }
+];
 
 //ESERCIZIO FUNZIONE addTodo
 
@@ -14,7 +18,7 @@ const addTodo = (obj: { title: string }): Todo => {
     };
 
     todos.push(newTodo);
-    console.log(newTodo);
+    /* console.log(newTodo); */
 
     return newTodo;
 }
@@ -31,5 +35,13 @@ const addTodoToUser = (todoId: number, userId: number) => {
 }
 
 const result = addTodoToUser(1, 42);
-console.log(result);
-console.log(todos);
+/* console.log(result);
+console.log(todos); */
+
+//ESERCIZIO FUNZIONE getUserTodos
+
+const getUserTodos = (userId: number) => {
+    return todos.filter(todo => todo.userId == userId);
+}
+
+console.log(getUserTodos(43));
