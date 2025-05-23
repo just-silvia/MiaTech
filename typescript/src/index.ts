@@ -109,3 +109,15 @@ const addTodo = (obj: { title: string, metadata?: string | object }): TodoWithMe
 
 addTodo({ title: "Ciao ciao", metadata: "silvia" });
 addTodo({ title: "Ciao" });
+
+//ESERCIZIO UTILITY PARTIAL
+
+const updateTodo = (id: number, updates: Partial<Todo>): Todo | null => {
+    const todo = todos.find(todos => todos.id == id);
+    if(!todo) return null;
+    Object.assign(todo, updates);
+    return todo;
+}
+
+console.log(updateTodo(2, { title: "fare la spesa" }));
+console.log(updateTodo(99, { title: "andare al mare" }));
