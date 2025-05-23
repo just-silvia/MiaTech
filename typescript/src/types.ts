@@ -12,6 +12,8 @@ export interface User {
     id: number;
     name: string;
     email?: string;
+    //ESERCIZIO READONLY
+    readonly todo: readonly Todo[];
 };
 
 //ESERCIZIO TodoWithMetadata EXTENDS Todo
