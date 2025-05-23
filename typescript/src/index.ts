@@ -44,4 +44,10 @@ const getUserTodos = (userId: number) => {
     return todos.filter(todo => todo.userId == userId);
 }
 
-console.log(getUserTodos(43));
+console.log(getUserTodos(7));
+
+//ESERCIZIO ERRORI CON NEVER
+
+const error = (message:string): never => {
+    throw new Error(message);
+}
