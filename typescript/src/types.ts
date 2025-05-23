@@ -3,7 +3,7 @@ export interface Todo {
     title: string;
     completed: boolean;
     userId?: number;
-    metadata?: any;
+    /* metadata?: any; */
 };
 
 //ESERCIZIO CREA INTERFACCIA UTENTE
@@ -13,3 +13,9 @@ export interface User {
     name: string;
     email?: string;
 };
+
+//ESERCIZIO TodoWithMetadata EXTENDS Todo
+
+export interface TodoWithMetadata extends Todo {
+    metadata: any;
+}
