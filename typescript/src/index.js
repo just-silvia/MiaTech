@@ -38,3 +38,18 @@ console.log(getUserTodos(7));
 const error = (message) => {
     throw new Error(message);
 };
+//ESERCIZIO TIPI DINAMICI CON UNKNOWN
+const parseInput = (input) => {
+    if (typeof input === "string") {
+        return input;
+    }
+    else if (typeof input === "number") {
+        return input.toString();
+    }
+    else {
+        return error("input errato");
+    }
+};
+console.log(parseInput("ciao"));
+console.log(parseInput(123));
+console.log(parseInput(true));
