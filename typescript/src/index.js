@@ -100,3 +100,14 @@ const updateTodo = (id, updates) => {
 };
 console.log(updateTodo(2, { title: "fare la spesa" }));
 console.log(updateTodo(99, { title: "andare al mare" }));
+//ESERCIZIO TUPLA
+const getTodoSummary = (todos) => {
+    return [todos.title, todos.completed];
+};
+const myTodo = {
+    id: 1,
+    title: "mia todo",
+    completed: true
+};
+const summary = getTodoSummary(myTodo);
+console.log(summary);
