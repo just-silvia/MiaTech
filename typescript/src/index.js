@@ -57,6 +57,25 @@ const parseInput = (input) => {
 console.log(parseInput(123));
 console.log(parseInput(true)); */
 //ESERCIZIO TYPE ANY
+/* let newId = 1;
+
+const addTodo = (obj: { title: string, metadata?: any }): Todo => {
+    const newTodo: Todo = {
+        id: newId++,
+        title: obj.title,
+        completed: false,
+        metadata: obj.metadata,
+    };
+
+    todos.push(newTodo);
+    console.log(newTodo);
+
+    return newTodo;
+}
+
+addTodo({ title: "Ciao ciao", metadata: "metadata" });
+addTodo({ title: "Ciao" }); */
+//ESERCIZIO UNION
 let newId = 1;
 const addTodo = (obj) => {
     const newTodo = {
@@ -69,5 +88,5 @@ const addTodo = (obj) => {
     console.log(newTodo);
     return newTodo;
 };
-addTodo({ title: "Ciao ciao", metadata: "metadata" });
+addTodo({ title: "Ciao ciao", metadata: "silvia" });
 addTodo({ title: "Ciao" });

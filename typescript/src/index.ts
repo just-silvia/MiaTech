@@ -1,4 +1,4 @@
-import { Todo } from "./types";
+import { Todo, TodoWithMetadata } from "./types";
 
 const todos: Todo[] = [
     { id: 1, title: "creare interfaccia todo", completed: true, userId: 42 },
@@ -70,7 +70,7 @@ console.log(parseInput(true)); */
 
 //ESERCIZIO TYPE ANY
 
-let newId = 1;
+/* let newId = 1;
 
 const addTodo = (obj: { title: string, metadata?: any }): Todo => {
     const newTodo: Todo = {
@@ -87,4 +87,25 @@ const addTodo = (obj: { title: string, metadata?: any }): Todo => {
 }
 
 addTodo({ title: "Ciao ciao", metadata: "metadata" });
+addTodo({ title: "Ciao" }); */
+
+//ESERCIZIO UNION
+
+let newId = 1;
+
+const addTodo = (obj: { title: string, metadata?: string | object }): TodoWithMetadata => {
+    const newTodo: TodoWithMetadata = {
+        id: newId++,
+        title: obj.title,
+        completed: false,
+        metadata: obj.metadata,
+    };
+
+    todos.push(newTodo);
+    console.log(newTodo);
+
+    return newTodo;
+}
+
+addTodo({ title: "Ciao ciao", metadata: "silvia" });
 addTodo({ title: "Ciao" });
