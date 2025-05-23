@@ -111,3 +111,16 @@ const myTodo = {
 };
 const summary = getTodoSummary(myTodo);
 console.log(summary);
+//ESERCIZIO PROJECT
+const createProject = (users, todos) => {
+    return {
+        users,
+        todos,
+    };
+};
+const todo1 = { id: 1, title: "andare in palestra", completed: false };
+const todo2 = { id: 2, title: "fare la spesa", completed: true };
+const user1 = { id: 1, name: "Silvia", todos: [todo1] };
+const user2 = { id: 2, name: "Mattia", todos: [todo2] };
+const project = createProject([user1, user2], [todo1, todo2]);
+console.log(project);

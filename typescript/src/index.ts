@@ -1,4 +1,4 @@
-import { Todo, TodoWithMetadata } from "./types";
+import { Todo, TodoWithMetadata, User, Project } from "./types";
 
 const todos: Todo[] = [
     { id: 1, title: "creare interfaccia todo", completed: true, userId: 42 },
@@ -136,3 +136,19 @@ const myTodo = {
 
 const summary = getTodoSummary(myTodo);
 console.log(summary);
+
+//ESERCIZIO PROJECT
+
+const createProject = (users: User[], todos: Todo[] ) : Project => {
+    return{
+        users,
+        todos,
+    }
+}
+
+const todo1: Todo = { id: 1, title: "andare in palestra", completed: false };
+const todo2: Todo = { id: 2, title: "fare la spesa", completed: true };
+const user1: User = { id: 1, name: "Silvia", todos: [todo1] };
+const user2: User = { id: 2, name: "Mattia", todos: [todo2] };
+const project = createProject([user1, user2], [todo1, todo2]);
+console.log(project);
