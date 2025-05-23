@@ -6,18 +6,22 @@ const todos = [
     { id: 3, title: "finalizzare il progetto", completed: false, userId: 43 }
 ];
 //ESERCIZIO FUNZIONE addTodo
-let newId = 1;
-const addTodo = (obj) => {
-    const newTodo = {
+/* let newId = 1;
+
+const addTodo = (obj: { title: string }): Todo => {
+    const newTodo: Todo = {
         id: newId++,
         title: obj.title,
         completed: false
     };
+
     todos.push(newTodo);
-    /* console.log(newTodo); */
+    console.log(newTodo);
+
     return newTodo;
-};
-addTodo({ title: "lista di todo" });
+}
+
+addTodo({ title: "lista di todo" }); */
 //ESERCIZIO FUNZIONE addTodoToUser
 const addTodoToUser = (todoId, userId) => {
     const todo = todos.find(todo => todo.id == todoId);
@@ -33,7 +37,6 @@ console.log(todos); */
 const getUserTodos = (userId) => {
     return todos.filter(todo => todo.userId == userId);
 };
-console.log(getUserTodos(7));
 //ESERCIZIO ERRORI CON NEVER
 const error = (message) => {
     throw new Error(message);
@@ -50,6 +53,21 @@ const parseInput = (input) => {
         return error("input errato");
     }
 };
-console.log(parseInput("ciao"));
+/* console.log(parseInput("ciao"));
 console.log(parseInput(123));
-console.log(parseInput(true));
+console.log(parseInput(true)); */
+//ESERCIZIO TYPE ANY
+let newId = 1;
+const addTodo = (obj) => {
+    const newTodo = {
+        id: newId++,
+        title: obj.title,
+        completed: false,
+        metadata: obj.metadata,
+    };
+    todos.push(newTodo);
+    console.log(newTodo);
+    return newTodo;
+};
+addTodo({ title: "Ciao ciao", metadata: "metadata" });
+addTodo({ title: "Ciao" });

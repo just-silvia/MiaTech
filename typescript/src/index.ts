@@ -8,7 +8,7 @@ const todos: Todo[] = [
 
 //ESERCIZIO FUNZIONE addTodo
 
-let newId = 1;
+/* let newId = 1;
 
 const addTodo = (obj: { title: string }): Todo => {
     const newTodo: Todo = {
@@ -18,12 +18,12 @@ const addTodo = (obj: { title: string }): Todo => {
     };
 
     todos.push(newTodo);
-    /* console.log(newTodo); */
+    console.log(newTodo);
 
     return newTodo;
 }
 
-addTodo({ title: "lista di todo" });
+addTodo({ title: "lista di todo" }); */
 
 //ESERCIZIO FUNZIONE addTodoToUser
 
@@ -44,7 +44,7 @@ const getUserTodos = (userId: number) => {
     return todos.filter(todo => todo.userId == userId);
 }
 
-console.log(getUserTodos(7));
+/* console.log(getUserTodos(7)) */;
 
 //ESERCIZIO ERRORI CON NEVER
 
@@ -64,6 +64,27 @@ const parseInput = (input: unknown) => {
     }
 }
 
-console.log(parseInput("ciao"));   
+/* console.log(parseInput("ciao"));   
 console.log(parseInput(123));      
-console.log(parseInput(true));
+console.log(parseInput(true)); */
+
+//ESERCIZIO TYPE ANY
+
+let newId = 1;
+
+const addTodo = (obj: { title: string, metadata?: any }): Todo => {
+    const newTodo: Todo = {
+        id: newId++,
+        title: obj.title,
+        completed: false,
+        metadata: obj.metadata,
+    };
+
+    todos.push(newTodo);
+    console.log(newTodo);
+
+    return newTodo;
+}
+
+addTodo({ title: "Ciao ciao", metadata: "metadata" });
+addTodo({ title: "Ciao" });
