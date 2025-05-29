@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const types_1 = require("./types");
 const todos = [
-    { id: 1, title: "creare interfaccia todo", completed: true, userId: 42 },
-    { id: 2, title: "creare interfaccia user", completed: true, userId: 7 },
-    { id: 3, title: "finalizzare il progetto", completed: false, userId: 43 }
+    { id: 1, title: "creare interfaccia todo", completed: true, userId: 42, status: types_1.TodoStatus.Completed },
+    { id: 2, title: "creare interfaccia user", completed: true, userId: 7, status: types_1.TodoStatus.Completed },
+    { id: 3, title: "finalizzare il progetto", completed: false, userId: 43, status: types_1.TodoStatus.InProgress }
 ];
 //ESERCIZIO FUNZIONE addTodo
 /* let newId = 1;
@@ -76,20 +77,25 @@ const addTodo = (obj: { title: string, metadata?: any }): Todo => {
 addTodo({ title: "Ciao ciao", metadata: "metadata" });
 addTodo({ title: "Ciao" }); */
 //ESERCIZIO UNION
-let newId = 1;
-const addTodo = (obj) => {
-    const newTodo = {
+/* let newId = 1;
+
+const addTodo = (obj: { title: string, metadata?: string | object }): TodoWithMetadata => {
+    const newTodo: TodoWithMetadata = {
         id: newId++,
         title: obj.title,
         completed: false,
         metadata: obj.metadata,
     };
+
     todos.push(newTodo);
     console.log(newTodo);
+
     return newTodo;
-};
+}
+
 addTodo({ title: "Ciao ciao", metadata: "silvia" });
 addTodo({ title: "Ciao" });
+ */
 //ESERCIZIO UTILITY PARTIAL
 const updateTodo = (id, updates) => {
     const todo = todos.find(todos => todos.id == id);
@@ -101,26 +107,54 @@ const updateTodo = (id, updates) => {
 console.log(updateTodo(2, { title: "fare la spesa" }));
 console.log(updateTodo(99, { title: "andare al mare" }));
 //ESERCIZIO TUPLA
-const getTodoSummary = (todos) => {
+/* const getTodoSummary = (todos : Todo) : [title: string, completed: boolean] => {
     return [todos.title, todos.completed];
-};
+}
+
 const myTodo = {
     id: 1,
     title: "mia todo",
     completed: true
-};
+}
+
 const summary = getTodoSummary(myTodo);
 console.log(summary);
+
 //ESERCIZIO PROJECT
-const createProject = (users, todos) => {
-    return {
+
+const createProject = (users: User[], todos: Todo[] ) : Project => {
+    return{
         users,
         todos,
-    };
-};
-const todo1 = { id: 1, title: "andare in palestra", completed: false };
-const todo2 = { id: 2, title: "fare la spesa", completed: true };
-const user1 = { id: 1, name: "Silvia", todos: [todo1] };
-const user2 = { id: 2, name: "Mattia", todos: [todo2] };
+    }
+}
+ */
+/* const todo1: Todo = { id: 1, title: "andare in palestra", completed: false };
+const todo2: Todo = { id: 2, title: "fare la spesa", completed: true };
+const user1: User = { id: 1, name: "Silvia", todos: [todo1] };
+const user2: User = { id: 2, name: "Mattia", todos: [todo2] };
 const project = createProject([user1, user2], [todo1, todo2]);
-console.log(project);
+console.log(project); */
+//Esercizio aggiungere stato ai Todo
+let newId = 1;
+const addTodo = (obj) => {
+    const newTodo = {
+        id: newId++,
+        title: obj.title,
+        completed: false,
+        //aggiungo status
+        status: types_1.TodoStatus.Pending,
+        metadata: obj.metadata,
+    };
+    todos.push(newTodo);
+    console.log(newTodo);
+    return newTodo;
+};
+//ESERCIZIO AGGIORNARE LO STATO DEI TODO
+const updateTodoStatus = (todoId, status) => {
+    const todo = todos.find(todos => todos.id == todoId);
+    if (!todo)
+        return false;
+    todo.status = status;
+    return true;
+};
