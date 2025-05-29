@@ -172,3 +172,12 @@ const addTodo = (obj: { title: string, metadata?: string | object }): TodoWithMe
 
     return newTodo;
 }
+
+//ESERCIZIO AGGIORNARE LO STATO DEI TODO
+
+const updateTodoStatus = (todoId: number, status: TodoStatus) : boolean => {
+    const todo = todos.find(todos => todos.id == todoId);
+    if(!todo) return false;
+    todo.status = status;
+    return true;
+}
