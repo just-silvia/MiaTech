@@ -1,9 +1,9 @@
-import { Todo, TodoWithMetadata, User, Project } from "./types";
+import { Todo, TodoWithMetadata, User, Project, TodoStatus } from "./types";
 
 const todos: Todo[] = [
-    { id: 1, title: "creare interfaccia todo", completed: true, userId: 42 },
-    { id: 2, title: "creare interfaccia user", completed: true, userId: 7 },
-    { id: 3, title: "finalizzare il progetto", completed: false, userId: 43 }
+    { id: 1, title: "creare interfaccia todo", completed: true, userId: 42, status: TodoStatus.Completed },
+    { id: 2, title: "creare interfaccia user", completed: true, userId: 7, status: TodoStatus.Completed },
+    { id: 3, title: "finalizzare il progetto", completed: false, userId: 43, status: TodoStatus.InProgress }
 ];
 
 //ESERCIZIO FUNZIONE addTodo
@@ -91,7 +91,7 @@ addTodo({ title: "Ciao" }); */
 
 //ESERCIZIO UNION
 
-let newId = 1;
+/* let newId = 1;
 
 const addTodo = (obj: { title: string, metadata?: string | object }): TodoWithMetadata => {
     const newTodo: TodoWithMetadata = {
@@ -109,7 +109,7 @@ const addTodo = (obj: { title: string, metadata?: string | object }): TodoWithMe
 
 addTodo({ title: "Ciao ciao", metadata: "silvia" });
 addTodo({ title: "Ciao" });
-
+ */
 //ESERCIZIO UTILITY PARTIAL
 
 const updateTodo = (id: number, updates: Partial<Todo>): Todo | null => {
@@ -124,7 +124,7 @@ console.log(updateTodo(99, { title: "andare al mare" }));
 
 //ESERCIZIO TUPLA
 
-const getTodoSummary = (todos : Todo) : [title: string, completed: boolean] => {
+/* const getTodoSummary = (todos : Todo) : [title: string, completed: boolean] => {
     return [todos.title, todos.completed];
 }
 
@@ -145,10 +145,30 @@ const createProject = (users: User[], todos: Todo[] ) : Project => {
         todos,
     }
 }
-
-const todo1: Todo = { id: 1, title: "andare in palestra", completed: false };
+ */
+/* const todo1: Todo = { id: 1, title: "andare in palestra", completed: false };
 const todo2: Todo = { id: 2, title: "fare la spesa", completed: true };
 const user1: User = { id: 1, name: "Silvia", todos: [todo1] };
 const user2: User = { id: 2, name: "Mattia", todos: [todo2] };
 const project = createProject([user1, user2], [todo1, todo2]);
-console.log(project);
+console.log(project); */
+
+//Esercizio aggiungere stato ai Todo
+
+let newId = 1;
+
+const addTodo = (obj: { title: string, metadata?: string | object }): TodoWithMetadata => {
+    const newTodo: TodoWithMetadata = {
+        id: newId++,
+        title: obj.title,
+        completed: false,
+        //aggiungo status
+        status: TodoStatus.Pending,
+        metadata: obj.metadata,
+    };
+
+    todos.push(newTodo);
+    console.log(newTodo);
+
+    return newTodo;
+}
