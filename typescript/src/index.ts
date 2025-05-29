@@ -1,11 +1,12 @@
-import { Todo, TodoWithMetadata, User, Project, TodoStatus } from "./types";
+import { Todo, TodoWithMetadata, Project, TodoStatus } from "./types";
+import { User } from "./User";
 
-const todos: Todo[] = [
+/* const todos: Todo[] = [
     { id: 1, title: "creare interfaccia todo", completed: true, userId: 42, status: TodoStatus.Completed },
     { id: 2, title: "creare interfaccia user", completed: true, userId: 7, status: TodoStatus.Completed },
     { id: 3, title: "finalizzare il progetto", completed: false, userId: 43, status: TodoStatus.InProgress }
 ];
-
+ */
 //ESERCIZIO FUNZIONE addTodo
 
 /* let newId = 1;
@@ -27,22 +28,22 @@ addTodo({ title: "lista di todo" }); */
 
 //ESERCIZIO FUNZIONE addTodoToUser
 
-const addTodoToUser = (todoId: number, userId: number) => {
+/* const addTodoToUser = (todoId: number, userId: number) => {
     const todo = todos.find(todo => todo.id == todoId);
     if(!todo) return false;
     todo.userId = userId;
     return true;
-}
+} */
 
-const result = addTodoToUser(1, 42);
+/* const result = addTodoToUser(1, 42); */
 /* console.log(result);
 console.log(todos); */
 
 //ESERCIZIO FUNZIONE getUserTodos
 
-const getUserTodos = (userId: number) => {
+/* const getUserTodos = (userId: number) => {
     return todos.filter(todo => todo.userId == userId);
-}
+} */
 
 /* console.log(getUserTodos(7)) */;
 
@@ -54,7 +55,7 @@ const error = (message:string): never => {
 
 //ESERCIZIO TIPI DINAMICI CON UNKNOWN
 
-const parseInput = (input: unknown) => {
+/* const parseInput = (input: unknown) => {
     if(typeof input === "string") {
         return input;
     } else if (typeof input === "number") {
@@ -62,7 +63,7 @@ const parseInput = (input: unknown) => {
     } else {
         return error("input errato");
     }
-}
+} */
 
 /* console.log(parseInput("ciao"));   
 console.log(parseInput(123));      
@@ -112,7 +113,7 @@ addTodo({ title: "Ciao" });
  */
 //ESERCIZIO UTILITY PARTIAL
 
-const updateTodo = (id: number, updates: Partial<Todo>): Todo | null => {
+/* const updateTodo = (id: number, updates: Partial<Todo>): Todo | null => {
     const todo = todos.find(todos => todos.id == id);
     if(!todo) return null;
     Object.assign(todo, updates);
@@ -120,7 +121,7 @@ const updateTodo = (id: number, updates: Partial<Todo>): Todo | null => {
 }
 
 console.log(updateTodo(2, { title: "fare la spesa" }));
-console.log(updateTodo(99, { title: "andare al mare" }));
+console.log(updateTodo(99, { title: "andare al mare" })); */
 
 //ESERCIZIO TUPLA
 
@@ -155,7 +156,7 @@ console.log(project); */
 
 //Esercizio aggiungere stato ai Todo
 
-let newId = 1;
+let newId = todos.length + 1;
 
 const addTodo = (obj: { title: string, metadata?: string | object }): TodoWithMetadata => {
     const newTodo: TodoWithMetadata = {
@@ -180,4 +181,16 @@ const updateTodoStatus = (todoId: number, status: TodoStatus) : boolean => {
     if(!todo) return false;
     todo.status = status;
     return true;
+}
+
+//ESERCIZIO UTILIZZARE LA CLASSE USER
+
+const user1 = new User(1, "Silvia", "silvia@example.com");
+const user2 = new User(2, "Mattia");
+
+const todo: Todo = {
+    id: 3,
+    title: "annaffiare le piante",
+    completed: false,
+    status: TodoStatus.Pending
 }
