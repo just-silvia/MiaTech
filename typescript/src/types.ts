@@ -4,6 +4,8 @@ export interface Todo {
     completed: boolean;
     userId?: number;
     /* metadata?: any; */
+    // AGGIUNGO PROPRIETA STATUS
+    status: TodoStatus;
 };
 
 //ESERCIZIO CREA INTERFACCIA UTENTE
@@ -27,4 +29,12 @@ export interface TodoWithMetadata extends Todo {
 export interface Project {
     users: User[];
     todos: Todo[];
+}
+
+//ESERCIZIO ENUM
+
+export enum TodoStatus {
+    Pending = "Pending",
+    InProgress = "InProgress",
+    Completed = "Completed"
 }
