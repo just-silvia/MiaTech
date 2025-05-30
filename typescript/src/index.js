@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const types_1 = require("./types");
+const User_1 = require("./User");
 const todos = [
     { id: 1, title: "creare interfaccia todo", completed: true, userId: 42, status: types_1.TodoStatus.Completed },
     { id: 2, title: "creare interfaccia user", completed: true, userId: 7, status: types_1.TodoStatus.Completed },
@@ -24,36 +25,34 @@ const addTodo = (obj: { title: string }): Todo => {
 
 addTodo({ title: "lista di todo" }); */
 //ESERCIZIO FUNZIONE addTodoToUser
-const addTodoToUser = (todoId, userId) => {
+/* const addTodoToUser = (todoId: number, userId: number) => {
     const todo = todos.find(todo => todo.id == todoId);
-    if (!todo)
-        return false;
+    if(!todo) return false;
     todo.userId = userId;
     return true;
-};
-const result = addTodoToUser(1, 42);
+} */
+/* const result = addTodoToUser(1, 42); */
 /* console.log(result);
 console.log(todos); */
 //ESERCIZIO FUNZIONE getUserTodos
-const getUserTodos = (userId) => {
+/* const getUserTodos = (userId: number) => {
     return todos.filter(todo => todo.userId == userId);
-};
+} */
+/* console.log(getUserTodos(7)) */ ;
 //ESERCIZIO ERRORI CON NEVER
-const error = (message) => {
+/* const error = (message:string): never => {
     throw new Error(message);
-};
+} */
 //ESERCIZIO TIPI DINAMICI CON UNKNOWN
-const parseInput = (input) => {
-    if (typeof input === "string") {
+/* const parseInput = (input: unknown) => {
+    if(typeof input === "string") {
         return input;
-    }
-    else if (typeof input === "number") {
+    } else if (typeof input === "number") {
         return input.toString();
-    }
-    else {
+    } else {
         return error("input errato");
     }
-};
+} */
 /* console.log(parseInput("ciao"));
 console.log(parseInput(123));
 console.log(parseInput(true)); */
@@ -97,15 +96,15 @@ addTodo({ title: "Ciao ciao", metadata: "silvia" });
 addTodo({ title: "Ciao" });
  */
 //ESERCIZIO UTILITY PARTIAL
-const updateTodo = (id, updates) => {
+/* const updateTodo = (id: number, updates: Partial<Todo>): Todo | null => {
     const todo = todos.find(todos => todos.id == id);
-    if (!todo)
-        return null;
+    if(!todo) return null;
     Object.assign(todo, updates);
     return todo;
-};
+}
+
 console.log(updateTodo(2, { title: "fare la spesa" }));
-console.log(updateTodo(99, { title: "andare al mare" }));
+console.log(updateTodo(99, { title: "andare al mare" })); */
 //ESERCIZIO TUPLA
 /* const getTodoSummary = (todos : Todo) : [title: string, completed: boolean] => {
     return [todos.title, todos.completed];
@@ -136,7 +135,7 @@ const user2: User = { id: 2, name: "Mattia", todos: [todo2] };
 const project = createProject([user1, user2], [todo1, todo2]);
 console.log(project); */
 //Esercizio aggiungere stato ai Todo
-let newId = 1;
+let newId = todos.length + 1;
 const addTodo = (obj) => {
     const newTodo = {
         id: newId++,
@@ -158,3 +157,28 @@ const updateTodoStatus = (todoId, status) => {
     todo.status = status;
     return true;
 };
+//ESERCIZIO UTILIZZARE LA CLASSE USER
+const user1 = new User_1.User(1, "Silvia", "silvia@example.com");
+const user2 = new User_1.User(2, "Mattia");
+const todo = {
+    id: 3,
+    title: "annaffiare le piante",
+    completed: false,
+    status: types_1.TodoStatus.Pending
+};
+//ESERCIZIO PARTIAL TODO  CHIEDI A MANFREDI PERCHE NON VA NEL TERMINALE
+const updatePartialTodos = (todoId, updates) => {
+    const todo = todos.find(t => t.id == todoId);
+    if (!todo)
+        return null;
+    Object.assign(todo, updates);
+    return todo;
+};
+const updatedTodo = updatePartialTodos(1, { completed: true, status: types_1.TodoStatus.Completed });
+if (updatedTodo) {
+    console.log("Todo aggiornato:", updatedTodo);
+}
+else {
+    console.log("Todo non trovato");
+}
+//ESERCIZIO RECORD

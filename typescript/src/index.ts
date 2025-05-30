@@ -1,12 +1,13 @@
 import { Todo, TodoWithMetadata, Project, TodoStatus } from "./types";
 import { User } from "./User";
+import { PartialTodo } from "./utils";
 
-/* const todos: Todo[] = [
+const todos: Todo[] = [
     { id: 1, title: "creare interfaccia todo", completed: true, userId: 42, status: TodoStatus.Completed },
     { id: 2, title: "creare interfaccia user", completed: true, userId: 7, status: TodoStatus.Completed },
     { id: 3, title: "finalizzare il progetto", completed: false, userId: 43, status: TodoStatus.InProgress }
 ];
- */
+
 //ESERCIZIO FUNZIONE addTodo
 
 /* let newId = 1;
@@ -49,9 +50,9 @@ console.log(todos); */
 
 //ESERCIZIO ERRORI CON NEVER
 
-const error = (message:string): never => {
+/* const error = (message:string): never => {
     throw new Error(message);
-}
+} */
 
 //ESERCIZIO TIPI DINAMICI CON UNKNOWN
 
@@ -194,3 +195,23 @@ const todo: Todo = {
     completed: false,
     status: TodoStatus.Pending
 }
+
+//ESERCIZIO PARTIAL TODO  CHIEDI A MANFREDI PERCHE NON VA NEL TERMINALE
+
+const updatePartialTodos = (todoId: number, updates: PartialTodo): Todo | null => {
+    const todo = todos.find(t => t.id == todoId);
+    if(!todo) return null;
+    Object.assign(todo, updates);
+    return todo;
+};
+
+const updatedTodo = updatePartialTodos(1, { completed: true, status: TodoStatus.Completed });
+
+if(updatedTodo) {
+  console.log("Todo aggiornato:", updatedTodo);
+} else {
+  console.log("Todo non trovato");
+}
+
+//ESERCIZIO RECORD
+
