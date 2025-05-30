@@ -1,6 +1,6 @@
 import { Todo, TodoWithMetadata, Project, TodoStatus } from "./types";
 import { User } from "./User";
-import { PartialTodo } from "./utils";
+import { PartialTodo, TodoRecord } from "./utils";
 
 const todos: Todo[] = [
     { id: 1, title: "creare interfaccia todo", completed: true, userId: 42, status: TodoStatus.Completed },
@@ -196,7 +196,7 @@ const todo: Todo = {
     status: TodoStatus.Pending
 }
 
-//ESERCIZIO PARTIAL TODO  CHIEDI A MANFREDI PERCHE NON VA NEL TERMINALE
+//ESERCIZIO PARTIAL TODO
 
 const updatePartialTodos = (todoId: number, updates: PartialTodo): Todo | null => {
     const todo = todos.find(t => t.id == todoId);
@@ -215,3 +215,12 @@ if(updatedTodo) {
 
 //ESERCIZIO RECORD
 
+const convertArrayToRecord = (todos: Todo[]) => {
+    return todos.reduce<TodoRecord>((record, todo) => {
+        record[todo.id] = todo;
+        return record
+    }, {})
+}
+
+const todoRecord = convertArrayToRecord(todos);
+console.log(todoRecord);
